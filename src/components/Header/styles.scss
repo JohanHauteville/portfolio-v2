@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 11;
+  width: calc(100% - 4rem);
+  padding: 2rem;
+  &__logo {
+    height: 60px;
+  }
+}
+
+.nav-list {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  padding: 10px 30px;
+  border-radius: 10px;
+  justify-content: space-around;
+  gap: 30px;
+  background-color: #ffffff5c;
+  li {
+    cursor: pointer;
+  }
+}
