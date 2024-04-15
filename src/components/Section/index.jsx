@@ -1,16 +1,25 @@
 import "./styles.scss";
 import PropTypes from "prop-types";
 
-function Section({ id, number, title, sentence }) {
+function Section({ id, mainTitle = false, number, title, sentence }) {
   return (
     <section className="hero" id={id}>
       <div className="hero__title">
-        <h1>
-          {number}
-          <br />
-          {title}
-        </h1>
-        <p>{sentence}</p>
+        {mainTitle ? (
+          <h1>
+            {/* <span className="hero__title--number">{number}</span>
+            <br /> */}
+            <span className="hero__title--subject">{title}</span>
+          </h1>
+        ) : (
+          <h2>
+            <span className="hero__title--number">{number}</span>
+            <br />
+            <span className="hero__title--subject">{title}</span>
+          </h2>
+        )}
+
+        {sentence && <p>{sentence}</p>}
       </div>
     </section>
   );
@@ -18,6 +27,7 @@ function Section({ id, number, title, sentence }) {
 
 Section.propTypes = {
   id: PropTypes.string,
+  mainTitle: PropTypes.bool,
   number: PropTypes.string,
   title: PropTypes.string,
   sentence: PropTypes.string,

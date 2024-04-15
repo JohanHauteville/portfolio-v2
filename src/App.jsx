@@ -8,25 +8,31 @@ import Section from "./components/Section";
 
 function App() {
   // const [count, setCount] = useState(0);
-
+  // let scrollY = 0;
+  // window.addEventListener("scroll", () => {
+  //   scrollY = window.scrollY;
+  //   console.log(window.scrollY);
+  // });
   return (
     <>
+      {}
       <Header />
       <Section
         id={"home"}
-        number={"01."}
-        title={"Hello World !"}
+        mainTitle={true}
+        title={"PORTFOLIO"}
         sentence={"< FrontEnd Developer />"}
       />
       <Mesh />
       <Section
         id={"projects"}
-        number={"02."}
-        title={"Projects"}
+        number={"01."}
+        title={"PROJECTS"}
         sentence={"Navigate through my projects !"}
       />
-      <Section id={"skills"} number={"03."} title={"Skills"} sentence={""} />
-      <Section id={"About"} number={"04."} title={"About"} sentence={""} />
+      <Section id={"skills"} number={"02."} title={"SKILLS"} sentence={""} />
+      <Section id={"About"} number={"03."} title={"ABOUT"} sentence={""} />
+      <Section id={"Contact"} number={"04."} title={"CONTACT"} sentence={""} />
     </>
   );
 }
