@@ -7,8 +7,6 @@ function Section({ id, mainTitle = false, number, title, sentence }) {
       <div className="hero__title">
         {mainTitle ? (
           <h1>
-            {/* <span className="hero__title--number">{number}</span>
-            <br /> */}
             <span className="hero__title--subject">{title}</span>
           </h1>
         ) : (

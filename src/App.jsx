@@ -31,8 +31,8 @@ function App() {
         sentence={"Navigate through my projects !"}
       />
       <Section id={"skills"} number={"02."} title={"SKILLS"} sentence={""} />
-      <Section id={"About"} number={"03."} title={"ABOUT"} sentence={""} />
-      <Section id={"Contact"} number={"04."} title={"CONTACT"} sentence={""} />
+      <Section id={"about"} number={"03."} title={"ABOUT"} sentence={""} />
+      <Section id={"contact"} number={"04."} title={"CONTACT"} sentence={""} />
     </>
   );
 }

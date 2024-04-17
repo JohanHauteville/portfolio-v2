@@ -10,8 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@lottiefiles/react-lottie-player": "^3.5.3",
     "@splinetool/react-spline": "^2.2.6",
-    "@splinetool/runtime": "^1.0.93",
+    "@splinetool/runtime": "^1.0.98",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.74.1"

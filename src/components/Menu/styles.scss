@@ -1,0 +1,62 @@
+.menu {
+  font-family: "Urbanist";
+  letter-spacing: 10px;
+  &__button {
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  &__background {
+    z-index: 8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: rgb(35, 35, 35);
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    bottom: initial;
+    transition: all 1s;
+    &--visible {
+      height: 100vh;
+      transition: all 1s;
+    }
+  }
+
+  &__nav-list {
+    font-size: 2rem;
+    list-style: none;
+    pointer-events: none;
+    &--visible {
+      pointer-events: initial;
+      @for $i from 1 through 10 {
+        li:nth-child(#{$i}) {
+          opacity: 1;
+          transition: opacity 1s 0.25s * $i;
+        }
+      }
+    }
+  }
+  & li {
+    opacity: 0;
+    transition: opacity 0.3s;
+    margin-bottom: 50px;
+    &::after {
+      content: "";
+      display: block;
+      background-color: #fff;
+      position: absolute;
+      height: 2px;
+      right: 0;
+      left: 50%;
+    }
+    &:hover {
+      &::after {
+        background-color: #678d7c;
+      }
+    }
+  }
+}

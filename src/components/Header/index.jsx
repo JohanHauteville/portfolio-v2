@@ -1,11 +1,13 @@
 import "./styles.scss";
 import logo from "../../assets/img/Logo-white.png";
+import Menu from "../Menu";
 
 function Header() {
   return (
     <div className="header">
       <img src={logo} alt="Logo" className="header__logo" />
-      <nav>
+      <Menu />
+      {/* <nav>
         <ul className="nav-list">
           <li>
             <a href="#home">Home</a>
@@ -19,7 +21,7 @@ function Header() {
           <li>About</li>
           <li>Contact</li>
         </ul>
-      </nav>
+      </nav> */}
     </div>
   );
 }
