@@ -22,11 +22,7 @@ function Menu() {
   return (
     <div className="menu">
       {/* BUTTON */}
-      <div
-        className="menu__button"
-        onClick={handleClick}
-        style={{ width: "100px" }}
-      >
+      <div className="menu__button" onClick={handleClick}>
         <Player
           ref={button}
           src={animation}

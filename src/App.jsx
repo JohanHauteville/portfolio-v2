@@ -5,6 +5,7 @@ import "./App.css";
 import Mesh from "./components/Mesh";
 import Header from "./components/Header";
 import Section from "./components/Section";
+import SocialBar from "./components/SocialBar";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -33,6 +34,7 @@ function App() {
       <Section id={"skills"} number={"02."} title={"SKILLS"} sentence={""} />
       <Section id={"about"} number={"03."} title={"ABOUT"} sentence={""} />
       <Section id={"contact"} number={"04."} title={"CONTACT"} sentence={""} />
+      <SocialBar />
     </>
   );
 }
