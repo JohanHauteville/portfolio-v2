@@ -1,0 +1,62 @@
+.project-showcase {
+  &__infos {
+    font-family: "Urbanist";
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #678d7c;
+    background-color: #fff;
+    width: 100vw;
+    height: 0px;
+    transition: height 0.8s, z-index 1s 0.5s;
+    overflow: hidden;
+    z-index: 0;
+    position: absolute;
+    top: -40px;
+
+    &--opened {
+      z-index: 2;
+      height: 100vh;
+      transition: height 0.8s;
+    }
+    & h3 {
+      font-size: 9rem;
+      letter-spacing: 3rem;
+      font-weight: 100;
+      margin-top: 70px;
+    }
+    & img {
+      box-shadow: 0px 20px 19px 1px rgba(0, 0, 0, 0.4);
+      margin-top: -240px;
+      height: 400px;
+      width: 70%;
+      object-fit: cover;
+    }
+  }
+  &__grid-info {
+    margin-top: 180px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    // gap: 50px;
+    & ul,
+    & p {
+      list-style: none;
+      text-align: left;
+      margin-top: 50px;
+      padding: 0;
+    }
+    & p {
+      text-align: right;
+    }
+    &--data {
+      margin-left: 80px;
+      white-space: nowrap;
+    }
+    &--bottom {
+      margin-top: auto;
+    }
+  }
+}

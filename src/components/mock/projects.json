@@ -1,0 +1,104 @@
+{
+    "projects":[
+        {
+            "name": "Portfolio",
+            "imgUrl": "src/assets/img/website/spadom_project.jpeg",
+            "sliderImages": [
+              "src/assets/img/website/spadom_project.jpeg",
+              "src/assets/img/website/spadom_project.jpeg",
+              "src/assets/img/website/spadom_project.jpeg"
+            ],
+            "setOfColors": {
+              "main": "#678d7c",
+              "typo": "#fff"
+            },
+            "technologies": "React, Blender, HTML, Sass",
+            "description":
+              "Un projet permettant de démontrer toute une palette de mes compétences",
+            "completedDate": "Avril 2024",
+            "typeOfContrat": "Personnal",
+            "role": "FrontEnd & Motion & 3D Artist",
+            "client": null
+        },
+        {
+            "name": "Réseau social",
+            "imgUrl": "under_construction_02.jpeg",
+            "sliderImages": [
+                "under_construction_02.jpeg",
+                "under_construction_02.jpeg",
+                "under_construction_02.jpeg"
+            ],
+            "setOfColors": {
+              "main": "#678d7c",
+              "typo": "#fff"
+            },
+            "technologies": "React, Next.Js, HTML, Sass",
+            "description":
+              "Un projet permettant de démontrer toute une palette de mes compétences",
+            "completedDate": "Avril 2024",
+            "typeOfContrat": "Personnal",
+            "role": "FrontEnd & Motion & 3D Artist",
+            "client": null
+        },
+        {
+            "name": "Portfolio",
+            "imgUrl": "src/assets/img/website/spadom_project.jpeg",
+            "sliderImages": [
+              "src/assets/img/website/spadom_project.jpeg",
+              "src/assets/img/website/spadom_project.jpeg",
+              "src/assets/img/website/spadom_project.jpeg"
+            ],
+            "setOfColors": {
+              "main": "#678d7c",
+              "typo": "#fff"
+            },
+            "technologies": "React, Blender, HTML, Sass",
+            "description":
+              "Un projet permettant de démontrer toute une palette de mes compétences",
+            "completedDate": "Avril 2024",
+            "typeOfContrat": "Personnal",
+            "role": "FrontEnd & Motion & 3D Artist",
+            "client": null
+        },
+        {
+            "name": "Portfolio",
+            "imgUrl": "src/assets/img/website/spadom_project.jpeg",
+            "sliderImages": [
+              "src/assets/img/website/spadom_project.jpeg",
+              "src/assets/img/website/spadom_project.jpeg",
+              "src/assets/img/website/spadom_project.jpeg"
+            ],
+            "setOfColors": {
+              "main": "#678d7c",
+              "typo": "#fff"
+            },
+            "technologies": "React, Blender, HTML, Sass",
+            "description":
+              "Un projet permettant de démontrer toute une palette de mes compétences",
+            "completedDate": "Avril 2024",
+            "typeOfContrat": "Personnal",
+            "role": "FrontEnd & Motion & 3D Artist",
+            "client": null
+        },
+        {
+            "name": "Portfolio",
+            "imgUrl": "src/assets/img/website/spadom_project.jpeg",
+            "sliderImages": [
+              "src/assets/img/website/spadom_project.jpeg",
+              "src/assets/img/website/spadom_project.jpeg",
+              "src/assets/img/website/spadom_project.jpeg"
+            ],
+            "setOfColors": {
+              "main": "#678d7c",
+              "typo": "#fff"
+            },
+            "technologies": "React, Blender, HTML, Sass",
+            "description":
+              "Un projet permettant de démontrer toute une palette de mes compétences",
+            "completedDate": "Avril 2024",
+            "typeOfContrat": "Personnal",
+            "role": "FrontEnd & Motion & 3D Artist",
+            "client": null
+        }
+    ]
+}

@@ -2,7 +2,7 @@ import "./styles.scss";
 import animation from "../../assets/animations/Menu_Button--white.json";
 import { Player } from "@lottiefiles/react-lottie-player";
 import { useRef, useState } from "react";
-import Mesh from "../Mesh";
+// import Mesh from "../Mesh";
 
 function Menu() {
   const button = useRef(null);
@@ -38,11 +38,11 @@ function Menu() {
             : "menu__background"
         }
       >
-        <Mesh
+        {/* <Mesh
           //   url="https://prod.spline.design/hsftirpwsm8X8uyM/scene.splinecode"
           url="https://prod.spline.design/7gNT0AE9w4rMGmQs/scene.splinecode"
           fullwidth={false}
-        />
+        /> */}
         <nav>
           <ul
             className={

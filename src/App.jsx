@@ -6,6 +6,7 @@ import Mesh from "./components/Mesh";
 import Header from "./components/Header";
 import Section from "./components/Section";
 import SocialBar from "./components/SocialBar";
+import ProjectsSlider from "./components/ProjectsSlider";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -16,7 +17,6 @@ function App() {
   // });
   return (
     <>
-      {}
       <Header />
       <Section
         id={"home"}
@@ -31,6 +31,7 @@ function App() {
         title={"PROJECTS"}
         sentence={"Navigate through my projects !"}
       />
+      <ProjectsSlider />
       <Section id={"skills"} number={"02."} title={"SKILLS"} sentence={""} />
       <Section id={"about"} number={"03."} title={"ABOUT"} sentence={""} />
       <Section id={"contact"} number={"04."} title={"CONTACT"} sentence={""} />
