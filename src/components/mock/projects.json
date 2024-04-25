@@ -1,6 +1,7 @@
 {
     "projects":[
         {
+            "id": 0,
             "name": "Portfolio",
             "imgUrl": "src/assets/img/website/spadom_project.jpeg",
             "sliderImages": [
@@ -21,8 +22,9 @@
             "client": null
         },
         {
+            "id": 1,
             "name": "Réseau social",
-            "imgUrl": "under_construction_02.jpeg",
+            "imgUrl": "src/assets/img/website/under_construction_02.jpeg",
             "sliderImages": [
                 "under_construction_02.jpeg",
                 "under_construction_02.jpeg",
@@ -41,6 +43,7 @@
             "client": null
         },
         {
+          "id": 2,
             "name": "Portfolio",
             "imgUrl": "src/assets/img/website/spadom_project.jpeg",
             "sliderImages": [
@@ -61,6 +64,7 @@
             "client": null
         },
         {
+            "id": 3,
             "name": "Portfolio",
             "imgUrl": "src/assets/img/website/spadom_project.jpeg",
             "sliderImages": [
@@ -81,6 +85,7 @@
             "client": null
         },
         {
+            "id": 4,
             "name": "Portfolio",
             "imgUrl": "src/assets/img/website/spadom_project.jpeg",
             "sliderImages": [
@@ -99,6 +104,27 @@
             "typeOfContrat": "Personnal",
             "role": "FrontEnd & Motion & 3D Artist",
             "client": null
-        }
+        },
+        {
+          "id": 5,
+          "name": "Portfolio",
+          "imgUrl": "src/assets/img/website/spadom_project.jpeg",
+          "sliderImages": [
+            "src/assets/img/website/spadom_project.jpeg",
+            "src/assets/img/website/spadom_project.jpeg",
+            "src/assets/img/website/spadom_project.jpeg"
+          ],
+          "setOfColors": {
+            "main": "#678d7c",
+            "typo": "#fff"
+          },
+          "technologies": "React, Blender, HTML, Sass",
+          "description":
+            "Un projet permettant de démontrer toute une palette de mes compétences",
+          "completedDate": "Avril 2024",
+          "typeOfContrat": "Personnal",
+          "role": "FrontEnd & Motion & 3D Artist",
+          "client": null
+      }
     ]
 }

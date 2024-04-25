@@ -2,219 +2,7 @@ import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import "./styles.scss";
 import ProjectShowCase from "./ProjectShowCase";
-
-const data = [
-  {
-    id: 0,
-    name: "Portfolio",
-    imgUrl: "src/assets/img/website/spadom_project.jpeg",
-    sliderImages: [
-      "src/assets/img/website/spadom_project.jpeg",
-      "src/assets/img/website/spadom_project.jpeg",
-      "src/assets/img/website/spadom_project.jpeg",
-    ],
-    setOfColors: {
-      main: "#678d7c",
-      typo: "#fff",
-    },
-    technologies: "React, Blender, HTML, Sass",
-    description:
-      "Un projet permettant de démontrer toute une palette de mes compétences",
-    completedDate: "Avril 2024",
-    typeOfContrat: "Personnal",
-    role: "FrontEnd & Motion & 3D Artist",
-    client: null,
-  },
-  {
-    id: 1,
-    name: "WealthHealth",
-    imgUrl: "src/assets/img/website/WealthHealth.png",
-    sliderImages: [
-      "src/assets/img/website/spadom_project.jpeg",
-      "src/assets/img/website/spadom_project.jpeg",
-      "src/assets/img/website/spadom_project.jpeg",
-    ],
-    setOfColors: {
-      main: "#678d7c",
-      typo: "#fff",
-    },
-    technologies: "React, Blender, HTML, Sass",
-    description:
-      "Un projet permettant de démontrer toute une palette de mes compétences",
-    completedDate: "Avril 2024",
-    typeOfContrat: "Personnal",
-    role: "FrontEnd & Motion & 3D Artist",
-    client: null,
-  },
-  {
-    id: 2,
-    name: "Portfolio",
-    imgUrl: "src/assets/img/website/spadom_project.jpeg",
-    sliderImages: [
-      "src/assets/img/website/spadom_project.jpeg",
-      "src/assets/img/website/spadom_project.jpeg",
-      "src/assets/img/website/spadom_project.jpeg",
-    ],
-    setOfColors: {
-      main: "#678d7c",
-      typo: "#fff",
-    },
-    technologies: "React, Blender, HTML, Sass",
-    description:
-      "Un projet permettant de démontrer toute une palette de mes compétences",
-    completedDate: "Avril 2024",
-    typeOfContrat: "Personnal",
-    role: "FrontEnd & Motion & 3D Artist",
-    client: null,
-  },
-  {
-    id: 3,
-    name: "Portfolio",
-    imgUrl: "src/assets/img/website/spadom_project.jpeg",
-    sliderImages: [
-      "src/assets/img/website/spadom_project.jpeg",
-      "src/assets/img/website/spadom_project.jpeg",
-      "src/assets/img/website/spadom_project.jpeg",
-    ],
-    setOfColors: {
-      main: "#678d7c",
-      typo: "#fff",
-    },
-    technologies: "React, Blender, HTML, Sass",
-    description:
-      "Un projet permettant de démontrer toute une palette de mes compétences",
-    completedDate: "Avril 2024",
-    typeOfContrat: "Personnal",
-    role: "FrontEnd & Motion & 3D Artist",
-    client: null,
-  },
-  {
-    id: 4,
-    name: "Social Network",
-    imgUrl: "src/assets/img/website/under_construction_02.jpeg",
-    sliderImages: [
-      "src/assets/img/website/spadom_project.jpeg",
-      "src/assets/img/website/spadom_project.jpeg",
-      "src/assets/img/website/spadom_project.jpeg",
-    ],
-    setOfColors: {
-      main: "#678d7c",
-      typo: "#fff",
-    },
-    technologies: "React, Blender, HTML, Sass",
-    description:
-      "Un projet permettant de démontrer toute une palette de mes compétences",
-    completedDate: "Avril 2024",
-    typeOfContrat: "Personnal",
-    role: "FrontEnd & Motion & 3D Artist",
-    client: null,
-  },
-  {
-    id: 5,
-    name: "Portfolio",
-    imgUrl: "src/assets/img/website/spadom_project.jpeg",
-    sliderImages: [
-      "src/assets/img/website/spadom_project.jpeg",
-      "src/assets/img/website/spadom_project.jpeg",
-      "src/assets/img/website/spadom_project.jpeg",
-    ],
-    setOfColors: {
-      main: "#678d7c",
-      typo: "#fff",
-    },
-    technologies: "React, Blender, HTML, Sass",
-    description:
-      "Un projet permettant de démontrer toute une palette de mes compétences",
-    completedDate: "Avril 2024",
-    typeOfContrat: "Personnal",
-    role: "FrontEnd & Motion & 3D Artist",
-    client: null,
-  },
-  {
-    id: 6,
-    name: "WealthHealth",
-    imgUrl: "src/assets/img/website/WealthHealth.png",
-    sliderImages: [
-      "src/assets/img/website/spadom_project.jpeg",
-      "src/assets/img/website/spadom_project.jpeg",
-      "src/assets/img/website/spadom_project.jpeg",
-    ],
-    setOfColors: {
-      main: "#678d7c",
-      typo: "#fff",
-    },
-    technologies: "React, Blender, HTML, Sass",
-    description:
-      "Un projet permettant de démontrer toute une palette de mes compétences",
-    completedDate: "Avril 2024",
-    typeOfContrat: "Personnal",
-    role: "FrontEnd & Motion & 3D Artist",
-    client: null,
-  },
-  {
-    id: 7,
-    name: "Portfolio",
-    imgUrl: "src/assets/img/website/spadom_project.jpeg",
-    sliderImages: [
-      "src/assets/img/website/spadom_project.jpeg",
-      "src/assets/img/website/spadom_project.jpeg",
-      "src/assets/img/website/spadom_project.jpeg",
-    ],
-    setOfColors: {
-      main: "#678d7c",
-      typo: "#fff",
-    },
-    technologies: "React, Blender, HTML, Sass",
-    description:
-      "Un projet permettant de démontrer toute une palette de mes compétences",
-    completedDate: "Avril 2024",
-    typeOfContrat: "Personnal",
-    role: "FrontEnd & Motion & 3D Artist",
-    client: null,
-  },
-  {
-    id: 8,
-    name: "Portfolio",
-    imgUrl: "src/assets/img/website/spadom_project.jpeg",
-    sliderImages: [
-      "src/assets/img/website/spadom_project.jpeg",
-      "src/assets/img/website/spadom_project.jpeg",
-      "src/assets/img/website/spadom_project.jpeg",
-    ],
-    setOfColors: {
-      main: "#678d7c",
-      typo: "#fff",
-    },
-    technologies: "React, Blender, HTML, Sass",
-    description:
-      "Un projet permettant de démontrer toute une palette de mes compétences",
-    completedDate: "Avril 2024",
-    typeOfContrat: "Personnal",
-    role: "FrontEnd & Motion & 3D Artist",
-    client: null,
-  },
-  {
-    id: 9,
-    name: "Social Network",
-    imgUrl: "src/assets/img/website/under_construction_02.jpeg",
-    sliderImages: [
-      "src/assets/img/website/spadom_project.jpeg",
-      "src/assets/img/website/spadom_project.jpeg",
-      "src/assets/img/website/spadom_project.jpeg",
-    ],
-    setOfColors: {
-      main: "#678d7c",
-      typo: "#fff",
-    },
-    technologies: "React, Blender, HTML, Sass",
-    description:
-      "Un projet permettant de démontrer toute une palette de mes compétences",
-    completedDate: "Avril 2024",
-    typeOfContrat: "Personnal",
-    role: "FrontEnd & Motion & 3D Artist",
-    client: null,
-  },
-];
+import { projects } from "../mock/projects.json";
 
 function ProjectsSlider() {
   const [isInfoOpened, setIsInfoOpened] = useState(false);
@@ -228,8 +16,8 @@ function ProjectsSlider() {
       setTimeout(() => {
         const newKindOfArray = arrayToChange.map((element) =>
           typeOfChange === "INCREASE"
-            ? (element = element + 1 === data.length ? 0 : element + 1)
-            : (element = element - 1 < 0 ? data.length - 1 : element - 1)
+            ? (element = element + 1 === projects.length ? 0 : element + 1)
+            : (element = element - 1 < 0 ? projects.length - 1 : element - 1)
         );
 
         arrayToChange = [...newKindOfArray];
@@ -250,9 +38,10 @@ function ProjectsSlider() {
 
   return (
     <div className="project-slider">
+      {/* SLIDER */}
       <div className="project-slider__cards">
         {arrayOfIndex.map((indexID, index) => {
-          const slide = data.find((slide) => slide.id === indexID);
+          const slide = projects.find((slide) => slide.id === indexID);
           return (
             slide && (
               <ProjectCard
@@ -285,11 +74,10 @@ function ProjectsSlider() {
       >
         Next
       </div>
-
       {/* INFORMATIONS */}
-      {data && (
+      {projects && (
         <ProjectShowCase
-          project={data[selectedIndex]}
+          project={projects[selectedIndex]}
           isOpened={isInfoOpened}
         />
       )}
