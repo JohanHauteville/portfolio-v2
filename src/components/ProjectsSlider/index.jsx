@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import "./styles.scss";
 import ProjectShowCase from "./ProjectShowCase";
@@ -220,42 +220,38 @@ function ProjectsSlider() {
   const [isInfoOpened, setIsInfoOpened] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(2);
   const [arrayOfIndex, setArrayOfIndex] = useState([0, 1, 2, 3, 4]);
-  const previousIndex = useMemo(() => {
-    return selectedIndex === 0 ? data.length - 1 : selectedIndex - 1;
-  }, [selectedIndex]);
-  const nextIndex = useMemo(() => {
-    return selectedIndex === data.length - 1 ? 0 : selectedIndex + 1;
-  }, [selectedIndex]);
 
-  function changeSlide(position) {
-    setSelectedIndex(position);
-    console.log("position ==== " + position);
-    console.log("length =" + data.length);
+  function changeSlide(typeOfChange, numberOfIteration) {
+    let arrayToChange = [...arrayOfIndex];
 
-    const newArray = [];
-    for (let i = 2; i > -3; i--) {
-      const r = position - i;
-      console.log("r = " + r);
-      if (r > data.length - 1) {
-        newArray.push(r - data.length);
-      } else if (r < 0) {
-        newArray.push(r + data.length);
-      } else {
-        newArray.push(r);
-      }
+    for (let i = 0; i < numberOfIteration; i++) {
+      setTimeout(() => {
+        const newKindOfArray = arrayToChange.map((element) =>
+          typeOfChange === "INCREASE"
+            ? (element = element + 1 === data.length ? 0 : element + 1)
+            : (element = element - 1 < 0 ? data.length - 1 : element - 1)
+        );
+
+        arrayToChange = [...newKindOfArray];
+        setArrayOfIndex(newKindOfArray);
+        setSelectedIndex(newKindOfArray[2]);
+      }, i * 300);
     }
-    console.log(newArray);
-    setArrayOfIndex(newArray);
   }
 
-  const startIndex = selectedIndex - 2;
-  const endIndex = selectedIndex + 2;
+  function handlePosition(clickedIndex) {
+    const diff = clickedIndex - 2; // calcul de l'index à partir de l'index cliqué pour obtenir un nb entre -2 et 2.
+    changeSlide(
+      diff < 0 ? "DECREASE" : "INCREASE",
+      Math.abs(diff) // Supprime le signe (-) de clickedIndex pour avoir le nombre d'itération
+    );
+    clickedIndex < 0 ? clickedIndex++ : clickedIndex--;
+  }
 
   return (
     <div className="project-slider">
       <div className="project-slider__cards">
-        {arrayOfIndex.map((indexID) => {
-          console.log("indexId =" + indexID);
+        {arrayOfIndex.map((indexID, index) => {
           const slide = data.find((slide) => slide.id === indexID);
           return (
             slide && (
@@ -270,47 +266,25 @@ function ProjectsSlider() {
                   indexID === selectedIndex ? setIsInfoOpened : undefined
                 }
                 key={slide.id}
-                // onClick={() => {
-                //   console.log(
-                //     "slide.id = " +
-                //       slide.id +
-                //       ";  selectedIndex = " +
-                //       selectedIndex
-                //   );
-                //   if (slide.id > selectedIndex) {
-                //     return changeSlide(nextIndex);
-                //   } else if (slide.id < selectedIndex) {
-                //     return changeSlide(previousIndex);
-                //   }
-                // }}
-
-                onClick={() => changeSlide(indexID)}
+                onClick={() => handlePosition(index)}
               />
             )
           );
         })}
-
-        {/* {data.slice(startIndex, endIndex + 1).map((slide, index) => {
-          const actualIndex = startIndex + index;
-          return (
-            <ProjectCard
-              data={slide}
-              imgUrl={slide.imgUrl}
-              mainCard={actualIndex === selectedIndex}
-              isInfoOpened={
-                actualIndex === selectedIndex ? isInfoOpened : undefined
-              }
-              setIsInfoOpened={
-                actualIndex === selectedIndex ? setIsInfoOpened : undefined
-              }
-              key={slide.id}
-              onClick={() => changeSlide(actualIndex)}
-            />
-          );
-        })} */}
       </div>
-      <div onClick={() => changeSlide(previousIndex)}>previous !</div>
-      <div onClick={() => changeSlide(nextIndex)}>next !</div>
+      {/* NAVIGATION BUTTONS */}
+      <div
+        className="project-slider__nav-button project-slider__nav-button--left"
+        onClick={() => handlePosition(1)}
+      >
+        Previous
+      </div>
+      <div
+        className="project-slider__nav-button project-slider__nav-button--right"
+        onClick={() => handlePosition(3)}
+      >
+        Next
+      </div>
 
       {/* INFORMATIONS */}
       {data && (

@@ -1,19 +1,26 @@
 import "./styles.scss";
 import PropTypes from "prop-types";
 
-function Section({ id, mainTitle = false, number, title, sentence }) {
+function Section({
+  id,
+  mainTitle = false,
+  number,
+  title,
+  sentence,
+  defineHeight,
+}) {
   return (
-    <section className="hero" id={id}>
-      <div className="hero__title">
+    <section className="section" id={id} style={{ height: defineHeight }}>
+      <div className="section__title">
         {mainTitle ? (
           <h1>
-            <span className="hero__title--subject">{title}</span>
+            <span className="section__title--subject">{title}</span>
           </h1>
         ) : (
           <h2>
-            <span className="hero__title--number">{number}</span>
+            <span className="section__title--number">{number}</span>
             <br />
-            <span className="hero__title--subject">{title}</span>
+            <span className="section__title--subject">{title}</span>
           </h2>
         )}
 
@@ -29,6 +36,7 @@ Section.propTypes = {
   number: PropTypes.string,
   title: PropTypes.string,
   sentence: PropTypes.string,
+  defineHeight: PropTypes.string,
 };
 
 export default Section;

@@ -1,49 +1,14 @@
-@keyframes open-card {
-  0% {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  10% {
-    position: absolute;
-    // top: calc(50vh - 100%);
-    left: 50%;
-    // left: calc(50vw - 100%);
-  }
-  80% {
-    // height: 400px;
-  }
-  100% {
-    position: absolute;
-    top: calc(50% - 200px);
-    left: calc(50% - 35vw);
-    width: 70vw;
-    height: 400px;
-    box-shadow: 0px 20px 19px 1px rgba(0, 0, 0, 0.4);
-  }
-}
-
 .project-card {
   position: relative;
   margin-top: 0;
-  // width: 100%;
-  // height: 100%;
-  transition: height 0.5s, box-shadow 0.1s, margin-top 0.5s 0.5s !important;
 
   &--opened {
-    // position: absolute;
-    // top: calc(50% - 200px);
     left: calc(50% - 35vw) !important;
     width: 70vw !important;
     height: 400px !important;
     box-shadow: 0px 20px 19px 1px rgba(0, 0, 0, 0.4);
-    margin-top: -240px;
+    margin-top: -420px;
     transition: height 0.5s, box-shadow 0.5s 0.5s, margin-top 0.5s 0.5s !important;
-    // animation-name: open-card;
-    // animation-duration: 1s;
-    // animation: open-card 5s forwards;
-    // transition: width 0.3s 1s, left 0.5s 0.5s height 0.3s, position 0.1s 0.1s,
-    //   box-shadow 0.4s 0.5s, margin-top 0.5s 1s;
   }
 
   &__img {
@@ -53,12 +18,8 @@
     height: 100%;
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     filter: grayscale(1);
-    // transition: filter 0.5s;
-    // transition: clip-path 0.5s;
-    transition: all 1s;
-
+    transition: all 0.5s;
     object-fit: cover;
-
     &:hover {
       filter: grayscale(0);
       //   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
@@ -74,7 +35,6 @@
     &--opened {
       clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
       filter: grayscale(0);
-      // transition: clip-path 0.5s;
       transition: all 0.5s;
     }
     &--opened + .project-card__border {

@@ -2,7 +2,7 @@
 // import reactLogo from "./assets/react.svg";
 // import viteLogo from "/vite.svg";
 import "./App.css";
-import Mesh from "./components/Mesh";
+// import Mesh from "./components/Mesh";
 import Header from "./components/Header";
 import Section from "./components/Section";
 import SocialBar from "./components/SocialBar";
@@ -24,12 +24,13 @@ function App() {
         title={"PORTFOLIO"}
         sentence={"< FrontEnd Developer />"}
       />
-      <Mesh />
+      {/* <Mesh /> */}
       <Section
         id={"projects"}
         number={"01."}
         title={"PROJECTS"}
         sentence={"Navigate through my projects !"}
+        defineHeight={"40vh"}
       />
       <ProjectsSlider />
       <Section id={"skills"} number={"02."} title={"SKILLS"} sentence={""} />
