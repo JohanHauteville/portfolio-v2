@@ -1,12 +1,10 @@
-// import { useState } from "react";
-// import reactLogo from "./assets/react.svg";
-// import viteLogo from "/vite.svg";
 import "./App.css";
 // import Mesh from "./components/Mesh";
 import Header from "./components/Header";
 import Section from "./components/Section";
 import SocialBar from "./components/SocialBar";
 import ProjectsSlider from "./components/ProjectsSlider";
+import Experiences from "./components/Experiences";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -33,8 +31,21 @@ function App() {
         defineHeight={"40vh"}
       />
       <ProjectsSlider />
-      <Section id={"skills"} number={"02."} title={"SKILLS"} sentence={""} />
-      <Section id={"about"} number={"03."} title={"ABOUT"} sentence={""} />
+      <Section
+        id={"skills"}
+        number={"02."}
+        title={"SKILLS"}
+        sentence={""}
+        defineHeight={"40vh"}
+      />
+      <Section
+        id={"experience"}
+        number={"03."}
+        title={"EXPERIENCE"}
+        sentence={""}
+        defineHeight={"40vh"}
+      />
+      <Experiences />
       <Section id={"contact"} number={"04."} title={"CONTACT"} sentence={""} />
       <SocialBar />
     </>

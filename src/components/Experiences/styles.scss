@@ -1,0 +1,154 @@
+.experiences {
+  font-family: "Urbanist";
+  //   max-width: 1400px;
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  //   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__list {
+    position: relative;
+    width: 30vw;
+    display: flex;
+  }
+  &__informations {
+    width: 60vw;
+    max-width: 800px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-lists {
+      display: flex;
+      width: 70%;
+      height: 80%;
+      gap: 90px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      height: 80px;
+      width: 80px;
+      //   background-color: #fff;
+    }
+    &::before {
+      border-top: 1px solid #fff;
+      border-left: 1px solid #fff;
+      top: 0;
+      left: 0;
+    }
+    &::after {
+      border-bottom: 1px solid #fff;
+      border-right: 1px solid #fff;
+      bottom: 0;
+      right: 0;
+    }
+    & ul {
+      list-style: none;
+      text-align: left;
+      padding-left: 0;
+      & li {
+        margin-bottom: 10px;
+      }
+    }
+    .missions {
+      list-style: inside;
+    }
+  }
+}
+
+.experiences-list {
+  &__elevator {
+    position: relative;
+    // height: 100%;
+    margin-left: 50px;
+    width: 20px;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 44px;
+      bottom: 20px;
+      width: 1px;
+      background-color: #fff;
+    }
+  }
+  &__diamond {
+    height: 10px;
+    width: 10px;
+    border: 2px solid #fff;
+    transform: rotateZ(0.125turn);
+    position: absolute;
+    left: 22%;
+    transition: top 0.5s;
+  }
+  &__links {
+    position: absolute;
+    font-size: 18px;
+    transform: rotateZ(0.75turn);
+    left: -8vw;
+    display: flex;
+    gap: 10px;
+    top: 40%;
+  }
+  &__link {
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    padding: 5px 20px;
+    text-align: center;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      //   z-index: 0;
+      // height: 100%;
+      top: 100%;
+      bottom: 0;
+      //   width: 100%;
+      left: 0;
+      right: 0;
+      //   background-color: #ffffff;
+      //   border: 0px;
+      border: 0px solid #fff;
+
+      transition: top 0.3s, border 0.3s;
+    }
+    &:hover {
+      //   color: #000;
+      //   transition: color 0.5s;
+      &::before {
+        top: 0;
+        transition: top 0.3s, border 0.3s;
+        border: 1px solid #fff;
+      }
+    }
+  }
+  &__works {
+    text-align: left;
+    margin-left: 20px;
+    height: 300px;
+    & ul {
+      height: 100%;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      //   justify-content: space-between;
+      gap: 20px;
+      font-size: 20px;
+      padding: 0;
+      & li {
+        cursor: pointer;
+      }
+    }
+  }
+}

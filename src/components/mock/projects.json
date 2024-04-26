@@ -126,5 +126,232 @@
           "role": "FrontEnd & Motion & 3D Artist",
           "client": null
       }
-    ]
+    ],
+    "skills":[
+      {"name": "FrontEnd",
+        "skills":[
+          {
+            "name": "Javascript",
+            "pictureURL": "src/#"
+          },
+          {
+            "name": "React",
+            "pictureURL": "src/#"
+          },
+          {
+            "name": "Redux",
+            "pictureURL": "src/#"
+          },
+          {
+            "name": "Material UI",
+            "pictureURL": "src/#"
+          },
+          {
+            "name": "Jest",
+            "pictureURL": "src/#"
+          }
+        ]
+      },
+      {"name": "BackEnd",
+        "skills":[
+          {
+            "name": "NodeJs",
+            "pictureURL": "src/#"
+          },
+          {
+            "name": "MongoDB",
+            "pictureURL": "src/#"
+          },
+          {
+            "name": "ExpressJS",
+            "pictureURL": "src/#"
+          },
+          {
+            "name": "JavaEE",
+            "pictureURL": "src/#"
+          }
+        ]
+      },
+      {"name": "HardSkills",
+        "skills":[
+          {
+            "name": "Figma",
+            "pictureURL": "src/#"
+          },
+          {
+            "name": "Photoshop",
+            "pictureURL": "src/#"
+          },
+          {
+            "name": "Illustrator",
+            "pictureURL": "src/#"
+          },
+          {
+            "name": "InDesign",
+            "pictureURL": "src/#"
+          },
+          {
+            "name": "After Effects",
+            "pictureURL": "src/#"
+          },
+          {
+            "name": "Maya",
+            "pictureURL": "src/#"
+          },
+          {
+            "name": "Blender",
+            "pictureURL": "src/#"
+          }
+        ]
+      },
+      {"name": "SoftSkills",
+        "skills":[
+          {
+            "name": "Curiosité",
+            "pictureURL": "src/#"
+          },
+          {
+            "name": "Créativité",
+            "pictureURL": "src/#"
+          },
+          {
+            "name": "Communication",
+            "pictureURL": "src/#"
+          },
+          {
+            "name": "Adaptabilité",
+            "pictureURL": "src/#"
+          },
+          {
+            "name": "Travail d'équipe",
+            "pictureURL": "src/#"
+          }
+        ]
+      }
+    ],
+    "experiences":{
+      "work":[
+        {
+          "name": "Kris et Jo SAS",
+          "date": "2018-2023",
+          "role": "Co-Fondateur",
+          "typeOfContract": "Actionnaire",
+          "location": "Le Crès",
+          "objectives":[
+            "Gestion de l'entreprise",
+            "Créations Graphiques",
+            "Création et gestion complète du E-Commerce"
+          ]
+        },
+        {
+          "name": "T.m.a",
+          "date": "2015-2017",
+          "role": "Responsable Logistique",
+          "typeOfContract": "CDI",
+          "location": "Vendargues",
+          "objectives":[
+            "Chargé de communication",
+            "Gestion du parc informatique",
+            "Responsable de la gestion des stocks"
+          ]
+        },
+        {
+          "name": "Freelance",
+          "date": "2014-2015",
+          "role": "Graphiste Maquetiste VFX",
+          "typeOfContract": "Freelance",
+          "location": "Montpellier",
+          "objectives":[
+            "Réalisation graphique de support de communication",
+            "Réalisation de vidéos marketing"
+          ]
+        },
+        {
+          "name": "IpnK Studio",
+          "date": "2012-2014",
+          "role": "Animateur 3D / Graphiste 2D",
+          "typeOfContract": "Actionnaire",
+          "location": "Montpellier",
+          "objectives":[
+            "Responsable du pôle création des animations 3D d'applications mobiles",
+            "Réalisation du Rigging des modèles 3D",
+            "Réalisation de recherches graphiques"
+          ]
+        },
+        {
+          "name": "F.o.c.s",
+          "date": "2008-2009",
+          "role": "Réparateur informatique",
+          "typeOfContract": "Stage",
+          "location": "Jacou",
+          "objectives":[
+            "Maintenance et recherche sur des serveurs",
+            "Réparation hardware pour les professionnels"
+          ]
+        },
+        {
+          "name": "Mairie de Bouzigues",
+          "date": "2007-2008",
+          "role": "Responsable informatique",
+          "typeOfContract": "Stage",
+          "location": "Bouzigues",
+          "objectives":[
+            "Création et maintenance d'un nouveau réseau: software et hardware",
+            "Création de cours d'informatique pour les collaborateurs"
+          ]
+        }
+      ],
+      "Certifications": [
+        {
+          "name": "R.N.C.P",
+          "date": "2024",
+          "role": "Développeur Concepteur Logiciel",
+          "typeOfContract": "Étudiant",
+          "location": "OpenClassrooms",
+          "objectives":[
+            "Conception d'API REST",
+            "Création d'applications React"
+          ]
+        },
+        {
+          "name": "Formation",
+          "date": "2012",
+          "role": "Graphiste / Animateur 3D",
+          "typeOfContract": "Étudiant",
+          "location": "ARIES",
+          "objectives":[
+            "Conception d'artworks",
+            "Création de modèles 3D",
+            "Animation des modèles 3D et Rendu des scènes",
+            "Post-Processing des scènes et Montage"
+          ]
+        },
+        {
+          "name": "Brevet de Technicien Supérieur",
+          "date": "2009",
+          "role": "Informatique et Réseaux pour l'Industrie et Ses Services",
+          "typeOfContract": "Étudiant",
+          "location": "Lycée Jean Mermoz - Montpellier",
+          "objectives":[
+            "Création de réseau et mise en place des serveurs",
+            "Conception d'application en C/C++",
+            "Utilisation du PIC pour récupérer les informations des microcontrolleurs",
+            "Conception de site internet"
+          ]
+        }
+        ,
+        {
+          "name": "Baccalauréat",
+          "date": "2005",
+          "role": "Sciences et Technologies Industrielles - génie Électronique",
+          "typeOfContract": "Étudiant",
+          "location": "Lycée Joliot Curie - Sète",
+          "objectives":[
+            "Utilisation de portes logiques",
+            "Langage Binaire",
+            "Conception de plaquettes électroniques"
+          ]
+        }
+      ]
+    }
 }
