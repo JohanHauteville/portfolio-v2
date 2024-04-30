@@ -1,0 +1,92 @@
+.skills {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 60vh;
+  margin-top: -60px;
+  margin-bottom: 200px;
+  font-family: "Urbanist";
+  & h3 {
+    font-weight: 200;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    padding-bottom: 0;
+  }
+  &__left,
+  &__middle,
+  &__right {
+    width: 30vw;
+  }
+  &__left,
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    & p {
+      font-weight: 200;
+      font-size: 1.2rem;
+      text-wrap: pretty;
+    }
+  }
+  &__middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__left {
+    text-align: right;
+  }
+  &__right {
+    text-align: left;
+  }
+}
+
+.skills__middle {
+  position: relative;
+  &-line {
+    position: absolute;
+    height: 7vw;
+    width: 9vh;
+    &:first-child {
+      border-left: 1px solid #fff;
+      top: 40px;
+      left: 70px;
+      transform: rotateZ(0.875turn);
+    }
+    &:nth-child(2) {
+      border-left: 1px solid #fff;
+      top: 40px;
+      right: 70px;
+      transform: rotateZ(0.625turn);
+    }
+    &:nth-child(4) {
+      border-left: 1px solid #fff;
+      bottom: 40px;
+      left: 70px;
+      transform: rotateZ(0.125turn);
+    }
+    &:last-child {
+      border-left: 1px solid #fff;
+      bottom: 40px;
+      right: 70px;
+      transform: rotateZ(0.38turn);
+    }
+  }
+  &-diamond {
+    background-color: #fff;
+    height: 400px;
+    width: 50%;
+    clip-path: polygon(
+      50% 0,
+      0 50%,
+      0.5% 50%,
+      50% 0.5%,
+      99.5% 50%,
+      50% 99.5%,
+      0.5% 50%,
+      0 50%,
+      50% 100%,
+      100% 50%
+    );
+  }
+}

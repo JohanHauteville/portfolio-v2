@@ -1,0 +1,102 @@
+{    "skills":[
+    {"name": "FrontEnd",
+      "skills":[
+        {
+          "name": "Javascript",
+          "pictureURL": "src/#"
+        },
+        {
+          "name": "React",
+          "pictureURL": "src/#"
+        },
+        {
+          "name": "Redux",
+          "pictureURL": "src/#"
+        },
+        {
+          "name": "Material UI",
+          "pictureURL": "src/#"
+        },
+        {
+          "name": "Jest",
+          "pictureURL": "src/#"
+        }
+      ]
+    },
+    {"name": "BackEnd",
+      "skills":[
+        {
+          "name": "NodeJs",
+          "pictureURL": "src/#"
+        },
+        {
+          "name": "MongoDB",
+          "pictureURL": "src/#"
+        },
+        {
+          "name": "ExpressJS",
+          "pictureURL": "src/#"
+        },
+        {
+          "name": "JavaEE",
+          "pictureURL": "src/#"
+        }
+      ]
+    },
+    {"name": "HardSkills",
+      "skills":[
+        {
+          "name": "Figma",
+          "pictureURL": "src/#"
+        },
+        {
+          "name": "Photoshop",
+          "pictureURL": "src/#"
+        },
+        {
+          "name": "Illustrator",
+          "pictureURL": "src/#"
+        },
+        {
+          "name": "InDesign",
+          "pictureURL": "src/#"
+        },
+        {
+          "name": "After Effects",
+          "pictureURL": "src/#"
+        },
+        {
+          "name": "Maya",
+          "pictureURL": "src/#"
+        },
+        {
+          "name": "Blender",
+          "pictureURL": "src/#"
+        }
+      ]
+    },
+    {"name": "SoftSkills",
+      "skills":[
+        {
+          "name": "Curiosité",
+          "pictureURL": "src/#"
+        },
+        {
+          "name": "Créativité",
+          "pictureURL": "src/#"
+        },
+        {
+          "name": "Communication",
+          "pictureURL": "src/#"
+        },
+        {
+          "name": "Adaptabilité",
+          "pictureURL": "src/#"
+        },
+        {
+          "name": "Travail d'équipe",
+          "pictureURL": "src/#"
+        }
+      ]
+    }
+  ]}

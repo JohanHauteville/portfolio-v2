@@ -5,6 +5,7 @@ import Section from "./components/Section";
 import SocialBar from "./components/SocialBar";
 import ProjectsSlider from "./components/ProjectsSlider";
 import Experiences from "./components/Experiences";
+import Skills from "./components/Skills";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -38,10 +39,11 @@ function App() {
         sentence={""}
         defineHeight={"40vh"}
       />
+      <Skills />
       <Section
-        id={"experience"}
+        id={"experiences"}
         number={"03."}
-        title={"EXPERIENCE"}
+        title={"EXPERIENCES"}
         sentence={""}
         defineHeight={"40vh"}
       />
