@@ -1,0 +1,47 @@
+.input {
+  position: relative;
+  width: 100%;
+  &__label,
+  &__field {
+    font-size: 1.4rem;
+    font-family: "Urbanist";
+    font-weight: 300;
+  }
+  &__label {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    transition: font-size 0.3s, top 0.3s, color 0.3s;
+    &--focused {
+      font-size: 0.8rem;
+      top: -14px;
+      color: #ffffff4d;
+      transition: font-size 0.3s, top 0.3s, color 0.3s;
+    }
+  }
+  &__field {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    border: none;
+    background-color: inherit;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    height: 40px;
+    margin-bottom: 40px;
+    &:focus {
+      color: #fff;
+      outline: none;
+    }
+    &--textarea {
+      height: 200px;
+    }
+  }
+  &__error {
+    position: absolute;
+    bottom: 0;
+    color: rgba(255, 0, 0, 0.732);
+    font-size: 0.8rem;
+  }
+}

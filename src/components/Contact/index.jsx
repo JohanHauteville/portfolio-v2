@@ -1,17 +1,12 @@
 import "./styles.scss";
 // import Proptypes from "prop-types";
 import picture from "../../assets/img/Montpellier-Map.png";
+import ContactForm from "./ContactForm";
 
 function Contact() {
-  function handleSubmit(e) {
-    e.preventDefault();
-  }
-
   return (
     <div className="contact">
-      <form onSubmit={handleSubmit}>
-        <input name="name" />
-      </form>
+      <ContactForm />
       <img src={picture} alt="montpellier" className="contact__picture" />
     </div>
   );

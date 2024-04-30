@@ -61,7 +61,7 @@ function Menu() {
               <a href="#skills">Skills</a>
             </li>
             <li onClick={handleClick}>
-              <a href="#experience">Experiences</a>
+              <a href="#experiences">Experiences</a>
             </li>
             <li onClick={handleClick}>
               <a href="#contact">Contact</a>

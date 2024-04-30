@@ -1,12 +1,13 @@
 .contact {
+  //   overflow: hidden;
+  margin-top: auto;
   &__picture {
+    // overflow: hidden;
+    opacity: 0.5;
+    max-width: 100vw;
     position: absolute;
     z-index: 0;
     left: 0;
-    top: 0;
-  }
-  & form {
-    position: relative;
-    z-index: 3;
+    top: -150px;
   }
 }

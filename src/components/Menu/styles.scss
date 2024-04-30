@@ -1,6 +1,7 @@
 .menu {
   font-family: "Urbanist";
   letter-spacing: 10px;
+
   &__button {
     width: 80px;
     position: relative;
@@ -9,20 +10,23 @@
   }
 
   &__background {
-    z-index: 8;
+    z-index: 7;
     display: flex;
     align-items: center;
     justify-content: center;
     position: fixed;
     background-color: rgb(35, 35, 35);
     top: 0;
-    left: 0;
-    right: 0;
-    height: 0;
+    // left: 0;
+    right: -400px;
+    // height: 0;
+    height: 100vh;
+
     bottom: initial;
     transition: all 1s;
     &--visible {
-      height: 100vh;
+      // height: 100vh;
+      right: 0;
       transition: all 1s;
     }
   }
@@ -36,7 +40,7 @@
       @for $i from 1 through 10 {
         li:nth-child(#{$i}) {
           opacity: 1;
-          transition: opacity 1s 0.25s * $i;
+          transition: opacity 1s 0.15s * $i;
         }
       }
     }
@@ -45,12 +49,15 @@
     opacity: 0;
     transition: opacity 0.3s;
     margin-bottom: 50px;
+    & a {
+      font-weight: 500;
+    }
     &::after {
       content: "";
       display: block;
       background-color: #fff;
       position: absolute;
-      height: 2px;
+      height: 1px;
       right: 0;
       left: 50%;
     }
