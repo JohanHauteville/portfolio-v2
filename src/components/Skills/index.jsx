@@ -2,7 +2,6 @@ import "./styles.scss";
 import { skills } from "../mock/skills.json";
 
 function Skills() {
-  console.log(skills);
   return (
     <div className="skills">
       <div className="skills__left">

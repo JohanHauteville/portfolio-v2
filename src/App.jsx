@@ -6,6 +6,7 @@ import SocialBar from "./components/SocialBar";
 import ProjectsSlider from "./components/ProjectsSlider";
 import Experiences from "./components/Experiences";
 import Skills from "./components/Skills";
+import Contact from "./components/Contact";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -36,7 +37,6 @@ function App() {
         id={"skills"}
         number={"02."}
         title={"SKILLS"}
-        sentence={""}
         defineHeight={"40vh"}
       />
       <Skills />
@@ -44,11 +44,19 @@ function App() {
         id={"experiences"}
         number={"03."}
         title={"EXPERIENCES"}
-        sentence={""}
         defineHeight={"40vh"}
       />
       <Experiences />
-      <Section id={"contact"} number={"04."} title={"CONTACT"} sentence={""} />
+
+      <Section
+        id={"contact"}
+        number={"04."}
+        title={"CONTACT"}
+        childrenPosition="top"
+      >
+        <Contact />
+      </Section>
+      {/* <p>Copyrights® 2024 - Made by JHauteville.</p> */}
       <SocialBar />
     </>
   );

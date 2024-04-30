@@ -1,0 +1,12 @@
+.contact {
+  &__picture {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+  }
+  & form {
+    position: relative;
+    z-index: 3;
+  }
+}

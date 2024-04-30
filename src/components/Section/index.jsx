@@ -8,9 +8,14 @@ function Section({
   title,
   sentence,
   defineHeight,
+  children,
+  childrenPosition = "undefined",
 }) {
   return (
     <section className="section" id={id} style={{ height: defineHeight }}>
+      {childrenPosition === "top" && (
+        <div className="section__children">{children}</div>
+      )}
       <div className="section__title">
         {mainTitle ? (
           <h1>
@@ -26,6 +31,9 @@ function Section({
 
         {sentence && <p>{sentence}</p>}
       </div>
+      {childrenPosition === "bottom" && (
+        <div className="section__children">{children}</div>
+      )}
     </section>
   );
 }
@@ -37,6 +45,8 @@ Section.propTypes = {
   title: PropTypes.string,
   sentence: PropTypes.string,
   defineHeight: PropTypes.string,
+  children: PropTypes.node,
+  childrenPosition: PropTypes.oneOf(["top", "bottom", "undefined"]),
 };
 
 export default Section;

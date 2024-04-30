@@ -7,8 +7,17 @@
   align-items: flex-start;
   height: 100svh;
   font-family: "Urbanist";
-  pointer-events: none;
+  // pointer-events: none;
+  &__children {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   &__title {
+    pointer-events: none;
     text-align: left;
     margin-left: 5rem;
     margin-bottom: 4rem;
