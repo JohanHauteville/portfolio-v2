@@ -2,17 +2,22 @@ import "./styles.scss";
 import PropTypes from "prop-types";
 import { forwardRef, useState } from "react";
 import { useController } from "react-hook-form";
+import { RiCheckboxBlankLine } from "react-icons/ri";
+import { IoMdCheckboxOutline } from "react-icons/io";
 
 const Input = forwardRef(
-  ({ inputName, inputLabel, textarea, ...props }, ref) => {
-    // function Input({ inputName, inputLabel, textarea, ...props }) {
+  (
+    { inputName, inputLabel, textarea, checkBox = false, ...props },
+
+    ref
+  ) => {
     const [isFocused, setIsFocused] = useState(false);
     const regex = {
-      name: {
+      user_name: {
         value: /^[a-zA-ZÀ-ÿ '-]+$/,
         message: "Caractères numériques et spéciaux interdits",
       },
-      email: {
+      user_email: {
         value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
         message: "Merci de respecter le format ---@---.---",
       },
@@ -28,53 +33,76 @@ const Input = forwardRef(
           value: 3,
           message: "3 caractères minimum.",
         },
-        pattern: {
-          value: regex[inputName] ? regex[inputName].value : "",
-          message: regex[inputName] ? regex[inputName].message : "kjkjb",
-        },
+        pattern: regex[inputName]
+          ? regex[inputName]
+          : {
+              value: "",
+              message: "",
+            },
       },
     });
+    const classNameInput = textarea
+      ? "input__field input__field--textarea"
+      : checkBox
+      ? "input__field input__field--checkBox"
+      : "input__field ";
+    const classNameLabel = checkBox
+      ? "input__label input__label--checkbox"
+      : "input__label";
+    const inputAttributes = {
+      name: inputName,
+      id: inputName,
+      className: classNameInput,
+      onFocus: () => {
+        setIsFocused(true);
+      },
+      onChange: onChange,
+      value: value || "",
+    };
 
     return (
-      <div className="input">
-        <label
-          htmlFor={inputName}
-          className={
-            isFocused || value !== ""
-              ? "input__label input__label--focused"
-              : "input__label"
-          }
-        >
-          {inputLabel}
-        </label>
+      <div className="input" ref={ref}>
+        {!checkBox && (
+          <label
+            htmlFor={inputName}
+            className={
+              isFocused || value !== ""
+                ? classNameLabel + " input__label--focused"
+                : classNameLabel
+            }
+          >
+            {inputLabel}
+          </label>
+        )}
+
         {textarea ? (
           <textarea
-            name={inputName}
-            id={inputName}
+            {...inputAttributes}
             {...props}
-            className="input__field input__field--textarea"
-            onFocus={() => setIsFocused(true)}
-            onChange={onChange}
             onBlur={() => {
-              setIsFocused(false);
               onBlur();
+              setIsFocused(false);
             }}
-            value={value || ""}
           />
         ) : (
           <input
-            name={inputName}
-            id={inputName}
+            {...inputAttributes}
             {...props}
-            className="input__field"
-            onFocus={() => setIsFocused(true)}
-            onChange={onChange}
+            type={checkBox ? "checkbox" : "text"}
             onBlur={() => {
-              setIsFocused(false);
               onBlur();
+              setIsFocused(false);
             }}
-            value={value || ""}
           />
+        )}
+        {checkBox && (
+          <div className="input__checkbox">
+            <div className="input__checkbox--icon">
+              {value ? <IoMdCheckboxOutline /> : <RiCheckboxBlankLine />}
+            </div>
+
+            <label htmlFor={inputName}>{inputLabel}</label>
+          </div>
         )}
         {errors[inputName]?.message && (
           <p className="input__error">{errors[inputName].message}</p>
@@ -86,6 +114,7 @@ const Input = forwardRef(
 
 Input.displayName = "Input";
 Input.propTypes = {
+  checkBox: PropTypes.bool,
   inputName: PropTypes.string,
   inputLabel: PropTypes.string,
   textarea: PropTypes.bool,

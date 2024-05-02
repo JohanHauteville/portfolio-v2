@@ -1,62 +1,120 @@
 import "./styles.scss";
 import Input from "./Input";
+import emailjs from "@emailjs/browser";
 import { FormProvider, useForm, Controller } from "react-hook-form";
+import { useState } from "react";
 
 function ContactForm() {
-  const methods = useForm();
+  const [isSending, setIsSending] = useState(false);
+
+  // Récupère les méthodes de useForm()
+  const methods = useForm({
+    defaultValues: {
+      user_name: "",
+      user_subject: "",
+      user_email: "",
+      user_message: "",
+      user_political_confidentiality: false,
+    },
+  });
+
+  // Initialise emailjs avec la PUBLIC KEY
+  emailjs.init({
+    publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY.toString(),
+  });
+
+  function sendingData() {
+    setIsSending(true);
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID.toString(),
+        import.meta.env.VITE_EMAILJS_TEMPLATE_CONTACT.toString(),
+        "#contact-form",
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY.toString()
+      )
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        // setMessage("✅   Message envoyé   👍");
+        // setOpen(true);
+        // reset();
+        methods.reset();
+        setIsSending(false);
+      })
+      .catch((error) => {
+        console.log("FAILED...", error);
+        setIsSending(false);
+        // setMessage("🚨   Echec de l'envoi   😱");
+        // setOpen(true);
+      });
+  }
 
   return (
     <>
       <FormProvider {...methods}>
         <form
+          id="contact-form"
           onSubmit={methods.handleSubmit((data) => {
             console.log(data);
+            sendingData();
           })}
           className="contact-form"
         >
           <Controller
             control={methods.control}
-            name="name"
+            name="user_name"
             render={({ field }) => (
-              <Input inputName="name" inputLabel="01. NOM" {...field} />
+              <Input inputName="user_name" inputLabel="01. NOM" {...field} />
             )}
           />
           <Controller
             control={methods.control}
-            name="subject"
-            render={({ field }) => (
-              <Input inputName="subject" inputLabel="02. SUJET" {...field} />
-            )}
-          />
-          <Controller
-            control={methods.control}
-            name="email"
-            render={({ field }) => (
-              <Input inputName="email" inputLabel="03. EMAIL" {...field} />
-            )}
-          />
-          <Controller
-            control={methods.control}
-            name="message"
+            name="user_subject"
             render={({ field }) => (
               <Input
-                inputName="message"
+                inputName="user_subject"
+                inputLabel="02. SUJET"
+                {...field}
+              />
+            )}
+          />
+          <Controller
+            control={methods.control}
+            name="user_email"
+            render={({ field }) => (
+              <Input inputName="user_email" inputLabel="03. EMAIL" {...field} />
+            )}
+          />
+          <Controller
+            control={methods.control}
+            name="user_message"
+            render={({ field }) => (
+              <Input
+                inputName="user_message"
                 inputLabel="04. MESSAGE"
                 textarea={true}
                 {...field}
               />
             )}
           />
-          {/* <Input inputName="name" inputLabel="01. NOM" />
-        <Input inputName="subject" inputLabel="02. SUJET" />
-        <Input inputName="email" inputLabel="03. EMAIL" />
-        <Input inputName="message" inputLabel="04. MESSAGE" textarea={true} /> */}
-          {/* <Input type="checkbox" placeholder="sfjh" /> */}
+          <Controller
+            control={methods.control}
+            name="user_political_confidentiality"
+            render={({ field }) => (
+              <Input
+                inputName="user_political_confidentiality"
+                inputLabel="J'accepte les Conditions d'utilisations."
+                checkBox={true}
+                {...field}
+              />
+            )}
+          />
           <button type="submit" className="contact-form__submit-button">
             ENVOYER
           </button>
         </form>
       </FormProvider>
+      {isSending && <span className="sending">Envoi du formulaire ...</span>}
     </>
   );
 }

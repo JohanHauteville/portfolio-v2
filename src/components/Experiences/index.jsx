@@ -1,6 +1,7 @@
 import "./styles.scss";
 import { works, certifications } from "../mock/experiences.json";
 import { useMemo, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 function Experiences() {
   const [typeOfList, setTypeOfList] = useState("works");
@@ -22,6 +23,24 @@ function Experiences() {
       );
     }
   }, [experienceName, typeOfList]);
+
+  const listVariant = {
+    visible: { opacity: 1, x: 0, transition: { delay: 0.3 } },
+    hidden: { opacity: 0, x: 30 },
+  };
+  const experienceBoxVariants = {
+    closed: {
+      width: "80px",
+      height: "80px",
+      rotate: 45,
+      transition: { delay: 0.3 },
+    },
+    opened: {
+      width: "60vw",
+      height: "100%",
+      rotate: 0,
+    },
+  };
 
   return (
     <div className="experiences">
@@ -50,48 +69,69 @@ function Experiences() {
         </div>
         <div className="experiences-list__works">
           <ul>
-            {experiencesList.map((experience) => {
-              return (
-                <li
-                  key={`list-work-${experience.name}`}
-                  onClick={() => setExperienceName(experience.name)}
-                >
-                  {experience.name}
-                </li>
-              );
-            })}
+            <AnimatePresence mode="popLayout">
+              {experiencesList.map((experience) => {
+                return (
+                  <motion.li
+                    variants={listVariant}
+                    animate="visible"
+                    initial="hidden"
+                    exit="hidden"
+                    key={`list-work-${experience.name}`}
+                    onClick={() => setExperienceName(experience.name)}
+                  >
+                    {experience.name}
+                  </motion.li>
+                );
+              })}
+            </AnimatePresence>
           </ul>
         </div>
       </div>
-      <div className="experiences__informations">
-        <div className="experiences__informations-lists">
-          <ul>
-            <li>NOM:</li>
-            <li>DATE:</li>
-            <li>ROLE:</li>
-            <li>CONTRAT:</li>
-            <li>LIEU:</li>
-            <li>MISSIONS:</li>
-          </ul>
-          {experienceToShow && (
-            <ul>
-              <li>{experienceToShow.name}</li>
-              <li>{experienceToShow.date}</li>
-              <li>{experienceToShow.role}</li>
-              <li>{experienceToShow.typeOfContract}</li>
-              <li>{experienceToShow.location}</li>
-              <li>
-                <ul className="missions">
-                  {experienceToShow.objectives.map((objective) => (
-                    <li key={`experience-objectives-${objective}`}>
-                      {objective}
-                    </li>
-                  ))}
+      <div className="experiences__informations-container">
+        <motion.div
+          className="experiences__informations"
+          variants={experienceBoxVariants}
+          animate={experienceToShow ? "opened" : "closed"}
+        >
+          <AnimatePresence mode="popLayout" transition={{ delay: 0 }}>
+            {experienceToShow && (
+              <motion.div
+                className="experiences__informations-lists"
+                variants={listVariant}
+                animate="visible"
+                initial="hidden"
+                exit="hidden"
+              >
+                <ul>
+                  <li>NOM:</li>
+                  <li>DATE:</li>
+                  <li>ROLE:</li>
+                  <li>CONTRAT:</li>
+                  <li>LIEU:</li>
+                  <li>MISSIONS:</li>
                 </ul>
-              </li>
-            </ul>
-          )}
-        </div>
+
+                <ul>
+                  <li>{experienceToShow.name}</li>
+                  <li>{experienceToShow.date}</li>
+                  <li>{experienceToShow.role}</li>
+                  <li>{experienceToShow.typeOfContract}</li>
+                  <li>{experienceToShow.location}</li>
+                  <li>
+                    <ul className="missions">
+                      {experienceToShow.objectives.map((objective) => (
+                        <li key={`experience-objectives-${objective}`}>
+                          {objective}
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                </ul>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
       </div>
     </div>
   );

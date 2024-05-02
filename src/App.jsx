@@ -7,6 +7,7 @@ import ProjectsSlider from "./components/ProjectsSlider";
 import Experiences from "./components/Experiences";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+// import CursorDiamond from "./components/CursorDiamond";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -30,23 +31,33 @@ function App() {
         number={"01."}
         title={"PROJECTS"}
         sentence={"Navigate through my projects !"}
-        defineHeight={"40vh"}
-      />
-      <ProjectsSlider />
+        // defineHeight={"40vh"}
+        childrenPosition="bottom"
+      >
+        <ProjectsSlider />
+      </Section>
+
       <Section
         id={"skills"}
         number={"02."}
         title={"SKILLS"}
-        defineHeight={"40vh"}
-      />
-      <Skills />
+        // defineHeight={"40vh"}
+        childrenPosition="bottom"
+      >
+        <Skills />
+      </Section>
+
       <Section
         id={"experiences"}
         number={"03."}
         title={"EXPERIENCES"}
-        defineHeight={"40vh"}
-      />
-      <Experiences />
+        // defineHeight={"40vh"}
+        childrenPosition="bottom"
+      >
+        <Experiences />
+      </Section>
+
+      {/* <Experiences /> */}
 
       <Section
         id={"contact"}
@@ -58,6 +69,7 @@ function App() {
       </Section>
       {/* <p>Copyrights® 2024 - Made by JHauteville.</p> */}
       <SocialBar />
+      {/* <CursorDiamond /> */}
     </>
   );
 }
