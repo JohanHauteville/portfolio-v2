@@ -31,6 +31,7 @@ function ProjectCard({
         onClick={() => {
           mainCard && setIsOpened(!isOpened);
           mainCard && setIsInfoOpened(!isInfoOpened);
+          window.location.href = "#projects";
         }}
       />
       {mainCard && <div className="project-card__border"></div>}

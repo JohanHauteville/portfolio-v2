@@ -1,7 +1,23 @@
 import "./styles.scss";
 import { works, certifications } from "../mock/experiences.json";
-import { useMemo, useState } from "react";
+import { forwardRef, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { PropTypes } from "prop-types";
+
+const ListItem = forwardRef(({ children }, ref) => {
+  return (
+    <motion.li
+      ref={ref}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+    >
+      {children}
+    </motion.li>
+  );
+});
+// déclaration
 
 function Experiences() {
   const [typeOfList, setTypeOfList] = useState("works");
@@ -41,6 +57,8 @@ function Experiences() {
       rotate: 0,
     },
   };
+
+  const MotionListItem = motion(ListItem);
 
   return (
     <div className="experiences">
@@ -113,17 +131,33 @@ function Experiences() {
                 </ul>
 
                 <ul>
-                  <li>{experienceToShow.name}</li>
-                  <li>{experienceToShow.date}</li>
-                  <li>{experienceToShow.role}</li>
-                  <li>{experienceToShow.typeOfContract}</li>
-                  <li>{experienceToShow.location}</li>
+                  <MotionListItem key={`name-${experienceToShow.name}`}>
+                    {experienceToShow.name}
+                  </MotionListItem>
+
+                  <MotionListItem key={experienceToShow.date}>
+                    {experienceToShow.date}
+                  </MotionListItem>
+                  <MotionListItem key={experienceToShow.role}>
+                    {experienceToShow.role}
+                  </MotionListItem>
+                  <MotionListItem key={experienceToShow.typeOfContract}>
+                    {experienceToShow.typeOfContract}
+                  </MotionListItem>
+                  <MotionListItem key={experienceToShow.location}>
+                    {experienceToShow.location}
+                  </MotionListItem>
                   <li>
                     <ul className="missions">
                       {experienceToShow.objectives.map((objective) => (
-                        <li key={`experience-objectives-${objective}`}>
+                        <motion.li
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 1 }}
+                          key={`experience-objectives-${objective}`}
+                        >
                           {objective}
-                        </li>
+                        </motion.li>
                       ))}
                     </ul>
                   </li>
@@ -136,5 +170,10 @@ function Experiences() {
     </div>
   );
 }
+
+ListItem.displayName = "ListItem";
+ListItem.propTypes = {
+  children: PropTypes.node,
+};
 
 export default Experiences;
