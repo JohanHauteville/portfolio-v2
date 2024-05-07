@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    // margin-top: 20px;
     background-color: #678d7c;
     background-color: #fff;
     width: 100vw;
@@ -13,8 +13,8 @@
     transition: height 0.8s, z-index 1s 0.5s;
     overflow: hidden;
     z-index: 0;
-    position: absolute;
-    top: -393px;
+    position: fixed;
+    top: 0;
 
     &--opened {
       z-index: 2;

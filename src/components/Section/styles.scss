@@ -5,39 +5,57 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  height: 100svh;
+  height: 200svh;
   width: 100vw;
   font-family: "Urbanist";
   // pointer-events: none;
   &__children {
-    position: relative;
+    position: fixed;
+    top: calc(100% / 5);
+    // left: 20%;
     width: 100vw;
-    height: 100%;
+    // height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   &__title {
+    position: fixed;
+    top: 0;
+    left: 20%;
     pointer-events: none;
     text-align: left;
     margin-left: 5rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
+    &--main {
+      top: calc(100% / 5);
+      left: 20%;
+      margin-left: 5rem;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+      // font-size: clamp(5rem, 10vw, 7rem);
+      // position: absolute;
+    }
     @media screen and (max-width: 700px) {
       margin-left: 5%;
       margin-bottom: 5%;
     }
     &--number {
+      display: inline-block;
       font-weight: 100;
-      font-size: clamp(5rem, 10vw, 5rem);
+      font-size: clamp(2rem, 4vw, 4rem);
 
       margin: 0;
+      margin-right: 30px;
     }
     &--subject {
+      display: inline-block;
       font-family: "Urbanist";
       font-weight: 100;
       letter-spacing: 20px;
-      font-size: clamp(5rem, 10vw, 7rem);
+      font-size: clamp(2rem, 6vw, 6rem);
+
       margin: 0;
       @media screen and (max-width: 700px) {
         letter-spacing: 10px;

@@ -24,13 +24,14 @@ function App() {
         mainTitle={true}
         title={"PORTFOLIO"}
         sentence={"< FrontEnd Developer />"}
+        defineHeight={"150svh"}
       />
       {/* <Mesh /> */}
       <Section
         id={"projects"}
         number={"01."}
         title={"PROJECTS"}
-        sentence={"Navigate through my projects !"}
+        // sentence={"Navigate through my projects !"}
         // defineHeight={"40vh"}
         childrenPosition="bottom"
       >
@@ -57,13 +58,11 @@ function App() {
         <Experiences />
       </Section>
 
-      {/* <Experiences /> */}
-
       <Section
         id={"contact"}
         number={"04."}
         title={"CONTACT"}
-        childrenPosition="top"
+        childrenPosition="bottom"
       >
         <Contact />
       </Section>
