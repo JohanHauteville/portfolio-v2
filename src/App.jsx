@@ -7,7 +7,6 @@ import ProjectsSlider from "./components/ProjectsSlider";
 import Experiences from "./components/Experiences";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
-// import CursorDiamond from "./components/CursorDiamond";
 
 function App() {
   // const [count, setCount] = useState(0);
