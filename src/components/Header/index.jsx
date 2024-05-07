@@ -16,7 +16,11 @@ function Header() {
     [0, 250, 300, 650],
     [40, 0, 0, 150]
   );
-  const separatorLeft = useTransform(scrollY, [255, 300], ["50%", "26.5%"]);
+  const separatorLeft = useTransform(
+    scrollY,
+    [255, 300],
+    ["50%", "calc(20% + 50px)"]
+  );
 
   return (
     <div className="header" ref={ref}>

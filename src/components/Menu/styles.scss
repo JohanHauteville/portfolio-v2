@@ -1,6 +1,7 @@
 .menu {
   font-family: "Urbanist";
   letter-spacing: 10px;
+  position: relative;
 
   &__button {
     width: 80px;
@@ -29,6 +30,13 @@
       right: 0;
       transition: all 1s;
     }
+  }
+  &__loading {
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 87px;
+    background-color: #191919;
   }
 
   &__nav-list {

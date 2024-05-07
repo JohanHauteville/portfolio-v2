@@ -23,3 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 .env
+src/components/CursorDiamond/index.jsx
+src/components/CursorDiamond/styles.scss

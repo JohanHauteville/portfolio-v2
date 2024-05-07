@@ -11,7 +11,6 @@ function Section({
   sentence = undefined,
   defineHeight,
   children,
-  childrenPosition = "undefined",
 }) {
   // --- SCROLL DECLARATION ---
   const ref = useRef(null);
@@ -26,19 +25,19 @@ function Section({
 
   // --- TRANSLATE ---
   // const sectionY = useTransform(scrollYProgress, [0, .5], )
-  const numberY = useTransform(
-    scrollYProgress,
-    [0.05, 0.45, 0.75],
-    [40, 0, -80]
-  );
+  const numberY = useTransform(scrollYProgress, [0, 0.45, 0.75], [40, 0, -60]);
   // const titleY = useTransform(scrollYProgress, [0.1, 0.5], [0, -300]);
-  // const titleX = useTransform(scrollYProgress, [0.1, 0.5], [0, -300]);
+  const titleX = useTransform(
+    scrollYProgress,
+    [0, 0.05, 0.5, 0.6],
+    [-30, 0, 0, 30]
+  );
   const sentenceX = useTransform(scrollYProgress, [0.15, 0.65], [0, -300]);
 
   // --- OPACITY ---
   const numberOpacity = useTransform(
     scrollYProgress,
-    [0, 0.05, 0.7, 0.8],
+    [0, 0.1, 0.7, 0.75],
     [0, 1, 1, 0]
   );
   const mainTitleOpacity = useTransform(
@@ -80,7 +79,9 @@ function Section({
       >
         {mainTitle ? (
           <motion.h1 style={{ opacity: mainTitleOpacity }}>
-            <span className="section__title--subject">{title}</span>
+            <span className="section__title--subject section__title--subject--main">
+              {title}
+            </span>
           </motion.h1>
         ) : (
           <h2>
@@ -91,7 +92,7 @@ function Section({
               {number}
             </motion.span>
             <motion.span
-              style={{ opacity: titleOpacity }}
+              style={{ x: titleX, opacity: titleOpacity }}
               className="section__title--subject"
             >
               {title}
@@ -105,7 +106,7 @@ function Section({
           </motion.p>
         )}
       </div>
-      {childrenPosition && (
+      {children && (
         <motion.div
           style={{ opacity: childrenOpacity, display: childrenDisplay }}
           className="section__children"
@@ -125,7 +126,6 @@ Section.propTypes = {
   sentence: PropTypes.string,
   defineHeight: PropTypes.string,
   children: PropTypes.node,
-  childrenPosition: PropTypes.oneOf(["top", "bottom", "undefined"]),
 };
 
 export default Section;

@@ -32,38 +32,19 @@ function App() {
         number={"0 1."}
         title={"PROJECTS"}
         // sentence={"Navigate through my projects !"}
-        // defineHeight={"40vh"}
-        childrenPosition="bottom"
       >
         <ProjectsSlider />
       </Section>
 
-      <Section
-        id={"skills"}
-        number={"02."}
-        title={"SKILLS"}
-        // defineHeight={"40vh"}
-        childrenPosition="bottom"
-      >
+      <Section id={"skills"} number={"02."} title={"SKILLS"}>
         <Skills />
       </Section>
 
-      <Section
-        id={"experiences"}
-        number={"03."}
-        title={"EXPERIENCES"}
-        // defineHeight={"40vh"}
-        childrenPosition="bottom"
-      >
+      <Section id={"experiences"} number={"03."} title={"EXPERIENCES"}>
         <Experiences />
       </Section>
 
-      <Section
-        id={"contact"}
-        number={"04."}
-        title={"CONTACT"}
-        childrenPosition="bottom"
-      >
+      <Section id={"contact"} number={"04."} title={"CONTACT"}>
         <Contact />
       </Section>
       {/* <p>Copyrights® 2024 - Made by JHauteville.</p> */}
