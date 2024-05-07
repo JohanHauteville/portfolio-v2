@@ -1,12 +1,13 @@
 .project-card {
   position: relative;
   margin-top: 0;
+  filter: drop-shadow(0 1rem 0.5rem #0000007d);
 
   &--opened {
     left: calc(50% - 35vw) !important;
     width: 70vw !important;
     height: 400px !important;
-    box-shadow: 0px 20px 19px 1px rgba(0, 0, 0, 0.4);
+    // box-shadow: 0px 20px 19px 1px rgba(0, 0, 0, 0.4);
     margin-top: -30vh;
     transition: height 0.5s, box-shadow 0.5s 0.5s, margin-top 0.5s 0.5s !important;
   }
@@ -18,6 +19,8 @@
     height: 100%;
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     filter: grayscale(1);
+    // filter: drop-shadow(0 0 1rem crimson) grayscale(1);
+
     transition: all 0.5s;
     object-fit: cover;
     &:hover {

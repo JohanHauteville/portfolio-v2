@@ -35,11 +35,11 @@ body {
 
 html{
   -ms-overflow-style: none;  /* IE and Edge */
-  /* scrollbar-width: none; */
+  scrollbar-width: none;
   /* cursor: none; */
 }
 html::-webkit-scrollbar{
-  /* display: none; */
+  display: none;
 }
 h1 {
   font-size: 3.2em;

@@ -66,15 +66,15 @@ function Experiences() {
         <div className="experiences-list__links">
           <div
             className="experiences-list__link"
-            onClick={() => setTypeOfList("works")}
-          >
-            Works
-          </div>
-          <div
-            className="experiences-list__link"
             onClick={() => setTypeOfList("certifications")}
           >
             Certifications
+          </div>
+          <div
+            className="experiences-list__link"
+            onClick={() => setTypeOfList("works")}
+          >
+            Works
           </div>
         </div>
         <div className="experiences-list__elevator">

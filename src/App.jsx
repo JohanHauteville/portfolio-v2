@@ -29,7 +29,7 @@ function App() {
       {/* <Mesh /> */}
       <Section
         id={"projects"}
-        number={"01."}
+        number={"0 1."}
         title={"PROJECTS"}
         // sentence={"Navigate through my projects !"}
         // defineHeight={"40vh"}

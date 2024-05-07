@@ -8,28 +8,34 @@ function Section({
   mainTitle = false,
   number,
   title,
-  sentence,
+  sentence = undefined,
   defineHeight,
   children,
   childrenPosition = "undefined",
 }) {
+  // --- SCROLL DECLARATION ---
   const ref = useRef(null);
-
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
 
+  //===========================
+  // ANIMATIONS BASED ON SCROLL
+  //===========================
+
+  // --- TRANSLATE ---
   // const sectionY = useTransform(scrollYProgress, [0, .5], )
   const numberY = useTransform(
     scrollYProgress,
     [0.05, 0.45, 0.75],
-    [40, 0, -40]
+    [40, 0, -80]
   );
-  const titleY = useTransform(scrollYProgress, [0.1, 0.5], [0, -300]);
-  const titleX = useTransform(scrollYProgress, [0.1, 0.5], [0, -300]);
+  // const titleY = useTransform(scrollYProgress, [0.1, 0.5], [0, -300]);
+  // const titleX = useTransform(scrollYProgress, [0.1, 0.5], [0, -300]);
   const sentenceX = useTransform(scrollYProgress, [0.15, 0.65], [0, -300]);
 
+  // --- OPACITY ---
   const numberOpacity = useTransform(
     scrollYProgress,
     [0, 0.05, 0.7, 0.8],
@@ -45,13 +51,13 @@ function Section({
     [0, 0.05, 0.5, 0.6],
     [0, 1, 1, 0]
   );
-  const sentenceOpacity = useTransform(scrollYProgress, [0.15, 0.25], [1, 0]);
+  const sentenceOpacity = useTransform(scrollYProgress, [0.5, 0.6], [1, 0]);
   const childrenOpacity = useTransform(
     scrollYProgress,
     [0.1, 0.2, 0.6, 0.7],
     [0, 1, 1, 0]
   );
-
+  // --- DISPLAY ---
   const childrenDisplay = useTransform(
     scrollYProgress,
     [0, 0.099, 0.1, 0.699, 0.7],
@@ -99,7 +105,7 @@ function Section({
           </motion.p>
         )}
       </div>
-      {childrenPosition === "bottom" && (
+      {childrenPosition && (
         <motion.div
           style={{ opacity: childrenOpacity, display: childrenDisplay }}
           className="section__children"
