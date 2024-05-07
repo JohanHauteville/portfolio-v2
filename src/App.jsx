@@ -23,47 +23,27 @@ function App() {
         mainTitle={true}
         title={"PORTFOLIO"}
         sentence={"< FrontEnd Developer />"}
+        defineHeight={"150svh"}
       />
       {/* <Mesh /> */}
       <Section
         id={"projects"}
-        number={"01."}
+        number={"0 1."}
         title={"PROJECTS"}
-        sentence={"Navigate through my projects !"}
-        // defineHeight={"40vh"}
-        childrenPosition="bottom"
+        // sentence={"Navigate through my projects !"}
       >
         <ProjectsSlider />
       </Section>
 
-      <Section
-        id={"skills"}
-        number={"02."}
-        title={"SKILLS"}
-        // defineHeight={"40vh"}
-        childrenPosition="bottom"
-      >
+      <Section id={"skills"} number={"02."} title={"SKILLS"}>
         <Skills />
       </Section>
 
-      <Section
-        id={"experiences"}
-        number={"03."}
-        title={"EXPERIENCES"}
-        // defineHeight={"40vh"}
-        childrenPosition="bottom"
-      >
+      <Section id={"experiences"} number={"03."} title={"EXPERIENCES"}>
         <Experiences />
       </Section>
 
-      {/* <Experiences /> */}
-
-      <Section
-        id={"contact"}
-        number={"04."}
-        title={"CONTACT"}
-        childrenPosition="top"
-      >
+      <Section id={"contact"} number={"04."} title={"CONTACT"}>
         <Contact />
       </Section>
       {/* <p>Copyrights® 2024 - Made by JHauteville.</p> */}
