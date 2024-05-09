@@ -7,6 +7,7 @@ import Experiences from "./components/Experiences";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import TopBar from "./components/TopBar";
+import Available from "./components/Available";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
 
       {/* <p>Copyrights® 2024 - Made by JHauteville.</p> */}
       <SocialBar />
+      <Available />
       {/* <CursorDiamond /> */}
     </>
   );
