@@ -27,10 +27,13 @@ function Menu() {
   const handleLinkClick = (link) => {
     setAnimationBackground(true);
     window.location.href = link;
+    // setTimeout(() => {
+    //   window.location.href = link;
+    // }, 500);
     handleClick();
     setTimeout(() => {
       setAnimationBackground(false);
-    }, 550);
+    }, 600);
   };
 
   return (
@@ -88,8 +91,12 @@ function Menu() {
         {animationBackground && (
           <motion.div
             initial={{ scale: 0, clipPath: clipPathStart }}
-            animate={{ scale: 70 }}
-            exit={{ scale: 70, clipPath: clipPathEnd }}
+            animate={{ scale: 40, transition: { duration: 0.26 } }}
+            exit={{
+              scale: 40,
+              clipPath: clipPathEnd,
+              transition: { duration: 0.6 },
+            }}
             className="menu__loading"
           ></motion.div>
         )}

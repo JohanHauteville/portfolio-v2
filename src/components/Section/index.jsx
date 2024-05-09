@@ -8,7 +8,7 @@ function Section({
   mainTitle = false,
   number,
   title,
-  sentence = undefined,
+  // sentence = undefined,
   defineHeight,
   children,
 }) {
@@ -24,15 +24,13 @@ function Section({
   //===========================
 
   // --- TRANSLATE ---
-  // const sectionY = useTransform(scrollYProgress, [0, .5], )
   const numberY = useTransform(scrollYProgress, [0, 0.45, 0.75], [40, 0, -60]);
-  // const titleY = useTransform(scrollYProgress, [0.1, 0.5], [0, -300]);
   const titleX = useTransform(
     scrollYProgress,
     [0, 0.05, 0.5, 0.6],
     [-30, 0, 0, 30]
   );
-  const sentenceX = useTransform(scrollYProgress, [0.15, 0.65], [0, -300]);
+  // const sentenceX = useTransform(scrollYProgress, [0.15, 0.65], [0, -300]);
 
   // --- OPACITY ---
   const numberOpacity = useTransform(
@@ -62,6 +60,12 @@ function Section({
     [0, 0.099, 0.1, 0.699, 0.7],
     ["none", "none", "flex", "flex", "none"]
   );
+  // --- WIDTH ---
+  const sentenceBarWidth = useTransform(
+    scrollYProgress,
+    [0.4, 0.6],
+    ["20%", "0%"]
+  );
 
   // useMotionValueEvent(scrollYProgress, "change", (latest) => {
   //   console.log("Value:", latest);
@@ -80,7 +84,13 @@ function Section({
         {mainTitle ? (
           <motion.h1 style={{ opacity: mainTitleOpacity }}>
             <span className="section__title--subject section__title--subject--main">
-              {title}
+              Johan Hauteville
+            </span>
+            <span className="section__title--subject section__title--subject--main">
+              Developpeur
+            </span>
+            <span className="section__title--subject section__title--subject--main">
+              FrontEnd
             </span>
           </motion.h1>
         ) : (
@@ -100,10 +110,19 @@ function Section({
           </h2>
         )}
 
-        {sentence && (
-          <motion.p style={{ x: sentenceX, opacity: sentenceOpacity }}>
-            {sentence}
-          </motion.p>
+        {mainTitle && (
+          <>
+            <motion.p
+              style={{ opacity: sentenceOpacity }}
+              className="section__title--sentence"
+            >
+              Basé à Montpellier
+            </motion.p>
+            <motion.div
+              style={{ width: sentenceBarWidth }}
+              className="section__title--sentence--bar"
+            ></motion.div>
+          </>
         )}
       </div>
       {children && (

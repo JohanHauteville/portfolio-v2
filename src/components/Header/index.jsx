@@ -11,17 +11,6 @@ function Header() {
   const headerY = useTransform(scrollY, [400, 600], [80, 0]);
   const headerScale = useTransform(scrollY, [400, 600], [0.2, 1]);
 
-  const separatorHeight = useTransform(
-    scrollY,
-    [0, 250, 300, 650],
-    [40, 0, 0, 150]
-  );
-  const separatorLeft = useTransform(
-    scrollY,
-    [255, 300],
-    ["50%", "calc(20% + 50px)"]
-  );
-
   return (
     <div className="header" ref={ref}>
       <div className="header__logo">
@@ -32,10 +21,6 @@ function Header() {
           style={{ y: headerY, scale: headerScale }}
         />
       </div>
-      <motion.div
-        className="header__separator"
-        style={{ height: separatorHeight, left: separatorLeft }}
-      ></motion.div>
       <Menu />
     </div>
   );

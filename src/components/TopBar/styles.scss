@@ -1,0 +1,14 @@
+.separator {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  height: 40px;
+  width: 1px;
+  background-color: #fff;
+  &__scroll {
+    position: absolute;
+    top: 25px;
+    left: -26px;
+    letter-spacing: 3px;
+  }
+}
