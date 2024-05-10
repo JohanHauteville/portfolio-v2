@@ -2,6 +2,7 @@ import { useRef } from "react";
 import "./styles.scss";
 import PropTypes from "prop-types";
 import { useScroll, useTransform, motion } from "framer-motion";
+// import Mesh from "../Mesh";
 
 function Section({
   id,
@@ -82,17 +83,20 @@ function Section({
         className={`section__title${mainTitle ? " section__title--main" : ""}`}
       >
         {mainTitle ? (
-          <motion.h1 style={{ opacity: mainTitleOpacity }}>
-            <span className="section__title--subject section__title--subject--main">
-              Johan Hauteville
-            </span>
-            <span className="section__title--subject section__title--subject--main">
-              Developpeur
-            </span>
-            <span className="section__title--subject section__title--subject--main">
-              FrontEnd
-            </span>
-          </motion.h1>
+          <>
+            <motion.h1 style={{ opacity: mainTitleOpacity }}>
+              <span className="section__title--subject section__title--subject--main">
+                Johan Hauteville
+              </span>
+              <span className="section__title--subject section__title--subject--main">
+                Developpeur
+              </span>
+              <span className="section__title--subject section__title--subject--main">
+                FrontEnd
+              </span>
+            </motion.h1>
+            {/* <Mesh /> */}
+          </>
         ) : (
           <h2>
             <motion.span

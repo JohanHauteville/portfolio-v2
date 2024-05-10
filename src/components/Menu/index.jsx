@@ -71,14 +71,15 @@ function Menu() {
             <li onClick={() => handleLinkClick("#home")}>
               <a href="#home">Home</a>
             </li>
-            <li onClick={() => handleLinkClick("#projects")}>
-              <a href="#projects">Projects</a>
-            </li>
+
             <li onClick={() => handleLinkClick("#skills")}>
               <a href="#skills">Skills</a>
             </li>
             <li onClick={() => handleLinkClick("#experiences")}>
               <a href="#experiences">Experiences</a>
+            </li>
+            <li onClick={() => handleLinkClick("#projects")}>
+              <a href="#projects">Projects</a>
             </li>
             <li onClick={() => handleLinkClick("#contact")}>
               <a href="#contact">Contact</a>

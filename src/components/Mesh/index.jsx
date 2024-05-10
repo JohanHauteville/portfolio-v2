@@ -16,6 +16,7 @@ function Mesh({ url, fullwidth = true }) {
       {/* <Spline scene="https://prod.spline.design/FHpEczInByVdFfUc/scene.splinecode" /> */}
       {/* <Spline scene="https://prod.spline.design/YFB9BBaGuaulvKfj/scene.splinecode" /> */}
       {/* <Spline scene="https://prod.spline.design/eFYe-Fy773GZLJ4P/scene.splinecode" /> */}
+      <Spline scene="https://prod.spline.design/BV8ttk33OIAjcE83/scene.splinecode" />
     </section>
   );
 }

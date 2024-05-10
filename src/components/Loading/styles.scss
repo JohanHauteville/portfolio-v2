@@ -1,0 +1,16 @@
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #191919;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  position: fixed;
+  &__text {
+    position: fixed;
+    margin: 0;
+    top: calc(50% - 14px);
+    left: calc(50% - 30px);
+  }
+}

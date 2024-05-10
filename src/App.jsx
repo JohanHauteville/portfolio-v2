@@ -8,10 +8,13 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import TopBar from "./components/TopBar";
 import Available from "./components/Available";
+import Mesh from "./components/Mesh";
+import Loading from "./components/Loading";
 
 function App() {
   return (
     <>
+      <Loading />
       <TopBar />
       <Header />
 
@@ -23,21 +26,21 @@ function App() {
         defineHeight={"150svh"}
       />
 
+      <Section id={"skills"} number={"0 1."} title={"SKILLS"}>
+        <Skills />
+      </Section>
+
+      <Section id={"experiences"} number={"02."} title={"EXPERIENCES"}>
+        <Experiences />
+      </Section>
+
       <Section
         id={"projects"}
-        number={"0 1."}
+        number={"03."}
         title={"PROJECTS"}
         // sentence={"Navigate through my projects !"}
       >
         <ProjectsSlider />
-      </Section>
-
-      <Section id={"skills"} number={"02."} title={"SKILLS"}>
-        <Skills />
-      </Section>
-
-      <Section id={"experiences"} number={"03."} title={"EXPERIENCES"}>
-        <Experiences />
       </Section>
 
       <Section id={"contact"} number={"04."} title={"CONTACT"}>
@@ -47,6 +50,7 @@ function App() {
       {/* <p>Copyrights® 2024 - Made by JHauteville.</p> */}
       <SocialBar />
       <Available />
+      <Mesh />
       {/* <CursorDiamond /> */}
     </>
   );

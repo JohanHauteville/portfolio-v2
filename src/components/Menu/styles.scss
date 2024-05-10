@@ -11,6 +11,7 @@
   }
 
   &__background {
+    filter: drop-shadow(0 1rem 0.5rem rgba(0, 0, 0, 0.4901960784));
     z-index: 7;
     display: flex;
     align-items: center;
