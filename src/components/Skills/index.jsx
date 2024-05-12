@@ -1,5 +1,5 @@
 import "./styles.scss";
-import { skills } from "../mock/skills.json";
+import { skills } from "../../mock/skills.json";
 
 function Skills() {
   return (

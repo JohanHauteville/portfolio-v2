@@ -1,5 +1,5 @@
 import "./styles.scss";
-import { works, certifications } from "../mock/experiences.json";
+import { works, certifications } from "../../mock/experiences.json";
 import { forwardRef, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { PropTypes } from "prop-types";

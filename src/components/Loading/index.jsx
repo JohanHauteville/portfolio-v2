@@ -9,7 +9,6 @@ function Loading() {
       animate={{
         opacity: 0,
         transition: { delay: 2, duration: 0.3 },
-        // transitionDuration: 2,
         transitionEnd: {
           display: "none",
         },

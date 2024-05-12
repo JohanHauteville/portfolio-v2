@@ -2,7 +2,7 @@ import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import "./styles.scss";
 import ProjectShowCase from "./ProjectShowCase";
-import { projects } from "../mock/projects.json";
+import { projects } from "../../mock/projects.json";
 
 function ProjectsSlider() {
   const [isInfoOpened, setIsInfoOpened] = useState(false);
