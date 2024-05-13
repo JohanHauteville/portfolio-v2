@@ -45,8 +45,8 @@ function ProjectsSlider() {
           return (
             slide && (
               <ProjectCard
-                data={slide}
                 imgUrl={slide.imgUrl}
+                imagesSlider={slide.sliderImages}
                 mainCard={indexID === selectedIndex}
                 isInfoOpened={
                   indexID === selectedIndex ? isInfoOpened : undefined

@@ -3,62 +3,71 @@
         {
             "id": 0,
             "name": "Argent Bank",
-            "imgUrl": "../assets/img/website/under_construction_02.jpeg",
+            "imgUrl": "../assets/img/card/argent-bank-card.png",
+            "links": {
+              "github": "https://github.com/JohanHauteville/Argent-Bank",
+              "demo": "",
+              "npm": ""
+            },
             "sliderImages": [
-              "src/assets/img/website/spadom_project.jpeg",
-              "src/assets/img/website/spadom_project.jpeg",
-              "src/assets/img/website/spadom_project.jpeg"
+              "../assets/img/website/argent-bank.png"
             ],
             "setOfColors": {
               "main": "#678d7c",
               "typo": "#fff"
             },
-            "technologies": "React, Blender, HTML, Sass",
+            "technologies": "React, Redux TK, React Router, Swagger, Sass",
             "description":
-              "Un projet permettant de démontrer toute une palette de mes compétences",
-            "completedDate": "Avril 2024",
-            "typeOfContrat": "Personnal",
-            "role": "FrontEnd & Motion & 3D Artist",
+              "Projet 13: Utilisez une API pour un compte utilisateur bancaire avec React.",
+            "completedDate": "Octobre 2023",
+            "typeOfContrat": "Student",
+            "role": "FrontEnd",
             "client": null
         },
         {
             "id": 1,
-            "name": "Réseau social",
-            "imgUrl": "../assets/img/website/under_construction_02.jpeg",
+            "name": "NPM Library",
+            "imgUrl": "../assets/img/card/npm-card.png",
+            "links": {
+              "github": "https://github.com/JohanHauteville/react-table-component",
+              "demo": "",
+              "npm": "https://www.npmjs.com/package/easy-react-table-component"
+            },
             "sliderImages": [
-                "under_construction_02.jpeg",
-                "under_construction_02.jpeg",
-                "under_construction_02.jpeg"
+                "../assets/img/website/easy-react-table-component.png"
             ],
             "setOfColors": {
-              "main": "#678d7c",
+              "main": "#A5AF6D",
               "typo": "#fff"
             },
-            "technologies": "React, Next.Js, HTML, Sass",
+            "technologies": "React, Sass, npm",
             "description":
-              "Un projet permettant de démontrer toute une palette de mes compétences",
-            "completedDate": "Avril 2024",
-            "typeOfContrat": "Personnal",
-            "role": "FrontEnd & Motion & 3D Artist",
+              "Création d'une bibliothèque React: Table",
+            "completedDate": "Janvier 2024",
+            "typeOfContrat": "Student",
+            "role": "FrontEnd",
             "client": null
         },
         {
           "id": 2,
             "name": "Portfolio",
-            "imgUrl": "../assets/img/website/spadom_project.jpeg",
+            "imgUrl": "../assets/img/card/portfolio-card.png",
+            "links": {
+              "github": "https://github.com/JohanHauteville/portfolio-v2",
+              "demo": "https://jhauteville.netlify.app",
+              "npm": ""
+            },
             "sliderImages": [
-              "src/assets/img/website/spadom_project.jpeg",
-              "src/assets/img/website/spadom_project.jpeg",
-              "src/assets/img/website/spadom_project.jpeg"
+              "../assets/img/website/portfolio.png"
             ],
             "setOfColors": {
-              "main": "#678d7c",
+              "main": "#131313",
               "typo": "#fff"
             },
-            "technologies": "React, Blender, HTML, Sass",
+            "technologies": "React, Blender, HTML, Sass, Spline",
             "description":
               "Un projet permettant de démontrer toute une palette de mes compétences",
-            "completedDate": "Avril 2024",
+            "completedDate": "En cours de développement..",
             "typeOfContrat": "Personnal",
             "role": "FrontEnd & Motion & 3D Artist",
             "client": null
@@ -67,61 +76,70 @@
             "id": 3,
             "name": "Réseau social",
             "imgUrl": "../assets/img/website/under_construction_02.jpeg",
+            "links": {
+              "github": "",
+              "demo": "",
+              "npm": ""
+            },
             "sliderImages": [
-              "src/assets/img/website/spadom_project.jpeg",
-              "src/assets/img/website/spadom_project.jpeg",
-              "src/assets/img/website/spadom_project.jpeg"
+              "../assets/img/website/under_construction_02.jpeg"
             ],
             "setOfColors": {
-              "main": "#678d7c",
-              "typo": "#fff"
+              "main": "#fff",
+              "typo": "#131313"
             },
-            "technologies": "React, Blender, HTML, Sass",
+            "technologies": "React, NextJs, HTML, Sass",
             "description":
-              "Un projet permettant de démontrer toute une palette de mes compétences",
-            "completedDate": "Avril 2024",
+              "Projet de réseau social implémenté en utilisant NextJs",
+            "completedDate": "En cours de développement...",
             "typeOfContrat": "Personnal",
-            "role": "FrontEnd & Motion & 3D Artist",
+            "role": "FullStack",
             "client": null
         },
         {
             "id": 4,
-            "name": "Portfolio",
-            "imgUrl": "../assets/img/website/spadom_project.jpeg",
+            "name": "Wealth Health",
+            "imgUrl": "../assets/img/card/wealth-health-card.png",
+            "links": {
+              "github": "https://github.com/JohanHauteville/WealthHealth",
+              "demo": "",
+              "npm": ""
+            },
             "sliderImages": [
-              "src/assets/img/website/spadom_project.jpeg",
-              "src/assets/img/website/spadom_project.jpeg",
-              "src/assets/img/website/spadom_project.jpeg"
+              "../assets/img/website/WealthHealth.png"
             ],
             "setOfColors": {
               "main": "#678d7c",
               "typo": "#fff"
             },
-            "technologies": "React, Blender, HTML, Sass",
+            "technologies": "React, Redux TK, React Router, HTML, Sass",
             "description":
               "Un projet permettant de démontrer toute une palette de mes compétences",
-            "completedDate": "Avril 2024",
+            "completedDate": "Janvier 2024",
             "typeOfContrat": "Personnal",
             "role": "FrontEnd & Motion & 3D Artist",
             "client": null
         },
         {
           "id": 5,
-          "name": "Portfolio",
-          "imgUrl": "src/assets/img/website/spadom_project.jpeg",
+          "name": "SportSee",
+          "imgUrl": "../assets/img/card/sportsee-card.png",
+          "links": {
+            "github": "https://github.com/JohanHauteville/sportsee",
+            "demo": "",
+            "npm": ""
+          },
           "sliderImages": [
-            "src/assets/img/website/spadom_project.jpeg",
-            "src/assets/img/website/spadom_project.jpeg",
-            "src/assets/img/website/spadom_project.jpeg"
+            "../assets/img/website/sportsee.png"
           ],
           "setOfColors": {
-            "main": "#678d7c",
+            "main": "#3B3B3B",
             "typo": "#fff"
           },
-          "technologies": "React, Blender, HTML, Sass",
+          "technologies": "React, ReCharts, Redux TK, React Router, Sass",
           "description":
-            "Un projet permettant de démontrer toute une palette de mes compétences",
-          "completedDate": "Avril 2024",
+            "Projet 12: Développer un tableau de bord d'analytics avec React.",
+          "completedDate": "Septembre 2023",
           "typeOfContrat": "Personnal",
           "role": "FrontEnd & Motion & 3D Artist",
           "client": null

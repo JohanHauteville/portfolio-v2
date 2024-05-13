@@ -42,17 +42,27 @@ function ProjectShowCase({ project = null, isOpened = false }) {
         <p>{project.description}</p>
       </div>
       <div className="project-showcase__grid-info project-showcase__grid-info--bottom">
-        <p>
-          <a href="#">
-            GitHub <MdArrowOutward />
-          </a>
-        </p>
-        <p>
-          <a href="#">
-            Visit the demo <MdArrowOutward />
-          </a>
-        </p>
-        <p></p>
+        {project.links.github && (
+          <p>
+            <a href={project.links.github}>
+              GitHub <MdArrowOutward />
+            </a>
+          </p>
+        )}
+        {project.links.demo && (
+          <p>
+            <a href={project.links.demo}>
+              Visit the demo <MdArrowOutward />
+            </a>
+          </p>
+        )}
+        {project.links.npm && (
+          <p>
+            <a href={project.links.npm}>
+              npm repo <MdArrowOutward />
+            </a>
+          </p>
+        )}
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 function ProjectCard({
   imgUrl,
+  imagesSlider,
   mainCard = false,
   isInfoOpened,
   setIsInfoOpened,
@@ -21,7 +22,8 @@ function ProjectCard({
       {...props}
     >
       <img
-        src={imgUrl}
+        src={isOpened ? imagesSlider[0] : imgUrl}
+        // src={imgUrl}
         alt="project"
         className={
           isOpened
@@ -45,6 +47,7 @@ ProjectCard.propTypes = {
   mainCard: PropTypes.bool,
   isInfoOpened: PropTypes.bool,
   setIsInfoOpened: PropTypes.func,
+  imagesSlider: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default ProjectCard;
