@@ -2,7 +2,7 @@ import { useRef } from "react";
 import "./styles.scss";
 import PropTypes from "prop-types";
 import { useScroll, useTransform, motion } from "framer-motion";
-// import Mesh from "../Mesh";
+import Mesh from "../Mesh";
 
 function Section({
   id,
@@ -12,6 +12,9 @@ function Section({
   // sentence = undefined,
   defineHeight,
   children,
+  meshUrl,
+  meshFront,
+  meshUnFixed,
 }) {
   // --- SCROLL DECLARATION ---
   const ref = useRef(null);
@@ -137,6 +140,15 @@ function Section({
           {children}
         </motion.div>
       )}
+
+      {meshUrl && (
+        <motion.div
+          style={{ opacity: childrenOpacity }}
+          className="section__mesh"
+        >
+          <Mesh url={meshUrl} front={meshFront} isUnFixed={meshUnFixed} />
+        </motion.div>
+      )}
     </section>
   );
 }
@@ -149,6 +161,9 @@ Section.propTypes = {
   sentence: PropTypes.string,
   defineHeight: PropTypes.string,
   children: PropTypes.node,
+  meshUrl: PropTypes.string,
+  meshFront: PropTypes.bool,
+  meshUnFixed: PropTypes.bool,
 };
 
 export default Section;

@@ -24,9 +24,17 @@ function App() {
         title={"FrontEnd\nDeveloper"}
         // sentence={"< FrontEnd Developer />"}
         defineHeight={"150svh"}
+        meshUrl={"https://prod.spline.design/wggkT2YOr3kJWCSl/scene.splinecode"}
       />
 
-      <Section id={"skills"} number={"0 1."} title={"SKILLS"}>
+      <Section
+        id={"skills"}
+        number={"0 1."}
+        title={"SKILLS"}
+        // meshUrl={"https://prod.spline.design/tsa6zsvFXIHonGWL/scene.splinecode"}
+        // meshFront={true}
+        // meshUnFixed={false}
+      >
         <Skills />
       </Section>
 
@@ -38,6 +46,7 @@ function App() {
         id={"projects"}
         number={"03."}
         title={"PROJECTS"}
+
         // sentence={"Navigate through my projects !"}
       >
         <ProjectsSlider />
@@ -50,7 +59,7 @@ function App() {
       {/* <p>Copyrights® 2024 - Made by JHauteville.</p> */}
       <SocialBar />
       <Available />
-      <Mesh />
+      <Mesh fullwidth={true} isUnFixed={false} />
       {/* <CursorDiamond /> */}
     </>
   );
