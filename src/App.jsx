@@ -8,7 +8,7 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import TopBar from "./components/TopBar";
 import Available from "./components/Available";
-import Mesh from "./components/Mesh";
+// import Mesh from "./components/Mesh";
 import Loading from "./components/Loading";
 
 function App() {
@@ -59,8 +59,13 @@ function App() {
       {/* <p>Copyrights® 2024 - Made by JHauteville.</p> */}
       <SocialBar />
       <Available />
-      <Mesh fullwidth={true} isUnFixed={false} />
+      {/* <Mesh fullwidth={true} isUnFixed={false} /> */}
       {/* <CursorDiamond /> */}
+      <img
+        src="../assets/img/website/background@0.5x.png"
+        alt="background"
+        className="app-background"
+      />
     </>
   );
 }
