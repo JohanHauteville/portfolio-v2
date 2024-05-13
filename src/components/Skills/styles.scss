@@ -3,31 +3,26 @@
   justify-content: center;
   width: 100vw;
   height: 60vh;
-  // margin-top: -60px;
-  // margin-bottom: 200px;
   font-family: "Urbanist";
+  @media screen and (max-width: 650px) {
+    justify-content: space-around;
+  }
   & h3 {
     font-weight: 200;
     letter-spacing: 2px;
     font-size: 2rem;
     padding-bottom: 0;
+    @media screen and (max-width: 650px) {
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+    }
   }
   &__left,
   &__middle,
   &__right {
     width: 30vw;
   }
-  &__left,
-  &__right {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    & p {
-      font-weight: 200;
-      font-size: 1.2rem;
-      text-wrap: pretty;
-    }
-  }
+
   &__middle {
     display: flex;
     justify-content: center;
@@ -39,10 +34,28 @@
   &__right {
     text-align: left;
   }
+  &__left,
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media screen and (max-width: 650px) {
+      text-align: center;
+    }
+    & p {
+      font-weight: 200;
+      font-size: 1.2rem;
+      text-wrap: pretty;
+    }
+  }
 }
 
 .skills__middle {
   position: relative;
+  @media screen and (max-width: 650px) {
+    display: none;
+  }
+
   &-line {
     position: absolute;
     height: 7vw;

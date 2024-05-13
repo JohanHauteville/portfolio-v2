@@ -22,7 +22,6 @@ function App() {
         id={"home"}
         mainTitle={true}
         title={"FrontEnd\nDeveloper"}
-        // sentence={"< FrontEnd Developer />"}
         defineHeight={"150svh"}
         meshUrl={"https://prod.spline.design/wggkT2YOr3kJWCSl/scene.splinecode"}
       />
@@ -42,13 +41,7 @@ function App() {
         <Experiences />
       </Section>
 
-      <Section
-        id={"projects"}
-        number={"03."}
-        title={"PROJECTS"}
-
-        // sentence={"Navigate through my projects !"}
-      >
+      <Section id={"projects"} number={"03."} title={"PROJECTS"}>
         <ProjectsSlider />
       </Section>
 

@@ -19,23 +19,17 @@
     position: fixed;
     background-color: rgb(35, 35, 35);
     top: 0;
-    // left: 0;
     right: -400px;
-    // height: 0;
     height: 100vh;
-
     bottom: initial;
     transition: all 1s;
     &--visible {
-      // height: 100vh;
       right: 0;
       transition: all 1s;
     }
   }
   &__loading {
     position: fixed;
-    // position: absolute;
-    // top: 0;
     top: calc(50% - 44px);
     left: calc(50% - 40px);
     width: 80px;

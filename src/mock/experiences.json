@@ -108,7 +108,7 @@
             "id": 2,
         "name": "Brevet de Technicien Supérieur",
         "date": "2009",
-        "role": "Informatique et Réseaux pour l'Industrie et Ses Services",
+        "role": "Informatique et Réseaux pour l'Indus. ",
         "typeOfContract": "Étudiant",
         "location": "Lycée Jean Mermoz - Montpellier",
         "objectives":[
@@ -122,7 +122,7 @@
             "id": 3,
         "name": "Baccalauréat",
         "date": "2005",
-        "role": "Sciences et Technologies Industrielles - génie Électronique",
+        "role": "Sciences et Techno. Indus. - Électronique",
         "typeOfContract": "Étudiant",
         "location": "Lycée Joliot Curie - Sète",
         "objectives":[

@@ -21,7 +21,6 @@ const ListItem = forwardRef(({ children }, ref) => {
 
 function Experiences() {
   const [typeOfList, setTypeOfList] = useState("works");
-  const [experienceName, setExperienceName] = useState(null);
 
   const experiencesList = useMemo(() => {
     if (typeOfList === "works") {
@@ -30,6 +29,8 @@ function Experiences() {
       return [...certifications];
     }
   }, [typeOfList]);
+  const [experienceName, setExperienceName] = useState(experiencesList[0].name);
+  // console.log(experiencesList[0]);
   const experienceToShow = useMemo(() => {
     if (typeOfList === "works") {
       return works.find((experience) => experience.name === experienceName);
@@ -52,7 +53,7 @@ function Experiences() {
       transition: { delay: 0.3 },
     },
     opened: {
-      width: "60vw",
+      width: "90vw",
       height: "100%",
       rotate: 0,
     },

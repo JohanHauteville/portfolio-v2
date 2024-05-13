@@ -1,16 +1,22 @@
 .experiences {
   font-family: "Urbanist";
-  //   max-width: 1400px;
   width: 100vw;
   height: 40vh;
   display: flex;
-  //   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+    justify-content: space-between;
+  }
   &__list {
     position: relative;
     width: 30vw;
     display: flex;
+    @media screen and (max-width: 700px) {
+      width: 100vw;
+      justify-content: center;
+    }
   }
   &__informations {
     width: 60vw;
@@ -20,18 +26,36 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 700px) {
+      width: 90vw;
+      // padding: 0 10px;
+    }
+    & ul {
+      @media screen and (max-width: 600px) {
+        padding-left: 10px !important;
+      }
+    }
     &-container {
       width: 60vw;
       height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
+      @media screen and (max-width: 700px) {
+        width: 100vw;
+      }
     }
     &-lists {
       display: flex;
       width: 70%;
       height: 80%;
       gap: 90px;
+      @media screen and (max-width: 700px) {
+        width: 90vw;
+        gap: 10px;
+        height: inherit;
+        justify-content: space-around;
+      }
     }
 
     &::before,
@@ -63,6 +87,9 @@
       padding-left: 0;
       & li {
         margin-bottom: 10px;
+        @media screen and (max-width: 700px) {
+          margin-bottom: 2px;
+        }
       }
     }
     .missions {
@@ -74,7 +101,6 @@
 .experiences-list {
   &__elevator {
     position: relative;
-    // height: 100%;
     margin-left: 50px;
     width: 20px;
     &::after {
@@ -86,6 +112,9 @@
       bottom: 20px;
       width: 1px;
       background-color: #fff;
+    }
+    @media screen and (max-width: 700px) {
+      display: none;
     }
   }
   &__diamond {
@@ -105,6 +134,9 @@
     display: flex;
     gap: 10px;
     top: 40%;
+    @media screen and (max-width: 600px) {
+      left: -15vw;
+    }
   }
   &__link {
     cursor: pointer;
@@ -153,6 +185,12 @@
       gap: 20px;
       font-size: 20px;
       padding: 0;
+
+      @media screen and (max-width: 700px) {
+        gap: 10px;
+        width: 50vw;
+      }
+
       & li {
         cursor: pointer;
       }

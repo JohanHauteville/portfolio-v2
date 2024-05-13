@@ -9,7 +9,6 @@ function Section({
   mainTitle = false,
   number,
   title,
-  // sentence = undefined,
   defineHeight,
   children,
   meshUrl,
@@ -34,8 +33,6 @@ function Section({
     [0, 0.05, 0.5, 0.6],
     [-30, 0, 0, 30]
   );
-  // const sentenceX = useTransform(scrollYProgress, [0.15, 0.65], [0, -300]);
-
   // --- OPACITY ---
   const numberOpacity = useTransform(
     scrollYProgress,
@@ -71,10 +68,6 @@ function Section({
     ["20%", "0%"]
   );
 
-  // useMotionValueEvent(scrollYProgress, "change", (latest) => {
-  //   console.log("Value:", latest);
-  //   console.log(scrollYMemo);
-  // });
   return (
     <section
       className="section"
@@ -98,7 +91,6 @@ function Section({
                 FrontEnd
               </span>
             </motion.h1>
-            {/* <Mesh /> */}
           </>
         ) : (
           <h2>
