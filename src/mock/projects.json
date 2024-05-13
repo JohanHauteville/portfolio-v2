@@ -2,8 +2,8 @@
     "projects":[
         {
             "id": 0,
-            "name": "Portfolio",
-            "imgUrl": "src/assets/img/website/spadom_project.jpeg",
+            "name": "Argent Bank",
+            "imgUrl": "../assets/img/website/under_construction_02.jpeg",
             "sliderImages": [
               "src/assets/img/website/spadom_project.jpeg",
               "src/assets/img/website/spadom_project.jpeg",
@@ -24,7 +24,7 @@
         {
             "id": 1,
             "name": "Réseau social",
-            "imgUrl": "src/assets/img/website/under_construction_02.jpeg",
+            "imgUrl": "../assets/img/website/under_construction_02.jpeg",
             "sliderImages": [
                 "under_construction_02.jpeg",
                 "under_construction_02.jpeg",
@@ -45,7 +45,7 @@
         {
           "id": 2,
             "name": "Portfolio",
-            "imgUrl": "src/assets/img/website/spadom_project.jpeg",
+            "imgUrl": "../assets/img/website/spadom_project.jpeg",
             "sliderImages": [
               "src/assets/img/website/spadom_project.jpeg",
               "src/assets/img/website/spadom_project.jpeg",
@@ -65,8 +65,8 @@
         },
         {
             "id": 3,
-            "name": "Portfolio",
-            "imgUrl": "src/assets/img/website/spadom_project.jpeg",
+            "name": "Réseau social",
+            "imgUrl": "../assets/img/website/under_construction_02.jpeg",
             "sliderImages": [
               "src/assets/img/website/spadom_project.jpeg",
               "src/assets/img/website/spadom_project.jpeg",
@@ -87,7 +87,7 @@
         {
             "id": 4,
             "name": "Portfolio",
-            "imgUrl": "src/assets/img/website/spadom_project.jpeg",
+            "imgUrl": "../assets/img/website/spadom_project.jpeg",
             "sliderImages": [
               "src/assets/img/website/spadom_project.jpeg",
               "src/assets/img/website/spadom_project.jpeg",
