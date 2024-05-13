@@ -1,5 +1,6 @@
 import "./styles.scss";
 import { motion } from "framer-motion";
+// import curriculum from "../../assets/files/curriculum-vitae.pdf";
 
 function Available() {
   return (
@@ -17,7 +18,9 @@ function Available() {
           className="available__lights--light"
         ></motion.div>
       </div>
-      <p>Available now for recruitment</p>
+      <a href="/assets/files/curriculum-vitae.pdf" download>
+        Available now for recruitment
+      </a>
     </motion.div>
   );
 }

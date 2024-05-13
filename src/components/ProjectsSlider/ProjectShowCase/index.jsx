@@ -39,7 +39,9 @@ function ProjectShowCase({ project = null, isOpened = false }) {
           <li>{project.technologies}</li>
           <li>{project.client}</li>
         </ul>
-        <p>{project.description}</p>
+        <p className="project-showcase__grid-info--description">
+          {project.description}
+        </p>
       </div>
       <div className="project-showcase__grid-info project-showcase__grid-info--bottom">
         {project.links.github && (

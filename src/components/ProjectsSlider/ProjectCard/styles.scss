@@ -10,6 +10,11 @@
     // box-shadow: 0px 20px 19px 1px rgba(0, 0, 0, 0.4);
     margin-top: -20vh;
     transition: height 0.5s, box-shadow 0.5s 0.5s, margin-top 0.5s 0.5s !important;
+    @media screen and (max-width: 600px) {
+      margin-top: -30vh;
+      left: calc(50% - 45vw) !important;
+      width: 90vw !important;
+    }
   }
 
   &__img {
