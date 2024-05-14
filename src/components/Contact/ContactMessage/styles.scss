@@ -1,0 +1,17 @@
+.contact-message {
+  background-color: #00000096;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__container {
+    background-color: #0f0f0f;
+    width: 50vw;
+    filter: drop-shadow(0 1rem 0.5rem rgba(0, 0, 0, 0.4901960784));
+  }
+}

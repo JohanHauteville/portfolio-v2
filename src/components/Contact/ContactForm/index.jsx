@@ -3,9 +3,12 @@ import Input from "./Input";
 import emailjs from "@emailjs/browser";
 import { FormProvider, useForm, Controller } from "react-hook-form";
 import { useState } from "react";
+import ContactMessage from "../ContactMessage";
 
 function ContactForm() {
   const [isSending, setIsSending] = useState(false);
+  const [displayMessage, setDisplayMessage] = useState(false);
+  const [isError, setIsError] = useState(true);
 
   // Récupère les méthodes de useForm()
   const methods = useForm({
@@ -33,19 +36,18 @@ function ContactForm() {
         "#contact-form",
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY.toString()
       )
-      .then((response) => {
-        console.log("SUCCESS!", response.status, response.text);
-        // setMessage("✅   Message envoyé   👍");
-        // setOpen(true);
-        // reset();
+      .then(() => {
+        // console.log("SUCCESS!", response.status, response.text);
+        setIsError(false);
+        setDisplayMessage(true);
         methods.reset();
         setIsSending(false);
       })
-      .catch((error) => {
-        console.log("FAILED...", error);
+      .catch(() => {
+        // console.log("FAILED...", error);
         setIsSending(false);
-        // setMessage("🚨   Echec de l'envoi   😱");
-        // setOpen(true);
+        setIsError(true);
+        setDisplayMessage(true);
       });
   }
 
@@ -54,8 +56,7 @@ function ContactForm() {
       <FormProvider {...methods}>
         <form
           id="contact-form"
-          onSubmit={methods.handleSubmit((data) => {
-            console.log(data);
+          onSubmit={methods.handleSubmit(() => {
             sendingData();
           })}
           className="contact-form"
@@ -114,6 +115,12 @@ function ContactForm() {
           </button>
         </form>
       </FormProvider>
+      <ContactMessage
+        display={displayMessage}
+        isError={isError}
+        setDisplay={setDisplayMessage}
+      />
+
       {isSending && <span className="sending">Envoi du formulaire ...</span>}
     </>
   );
