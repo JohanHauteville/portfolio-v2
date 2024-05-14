@@ -1,6 +1,6 @@
 import "./styles.scss";
 import { motion } from "framer-motion";
-// import curriculum from "../../assets/files/curriculum-vitae.pdf";
+import curriculum from "../../assets/files/curriculum-vitae.pdf";
 
 function Available() {
   return (
@@ -18,7 +18,7 @@ function Available() {
           className="available__lights--light"
         ></motion.div>
       </div>
-      <a href="/assets/files/curriculum-vitae.pdf" download>
+      <a href={curriculum} target="_blank" rel="noopener noreferrer">
         Available now for recruitment
       </a>
     </motion.div>
