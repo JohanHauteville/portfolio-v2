@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import "./styles.scss";
 import PropTypes from "prop-types";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -67,6 +67,28 @@ function Section({
     [0.4, 0.6],
     ["20%", "0%"]
   );
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 } // Le pourcentage de visibilité nécessaire pour déclencher le callback
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+  // const displayMesh = useTransform(scrollYProgress, [0.8, 0.9], [1, 0]);
 
   return (
     <section
@@ -132,10 +154,11 @@ function Section({
           {children}
         </motion.div>
       )}
-
-      {meshUrl && (
+      {meshUrl && isVisible && (
         <motion.div
-          style={{ opacity: childrenOpacity }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isVisible ? [0, 0, 0, 1] : 0 }}
+          transition={{ duration: 2 }}
           className="section__mesh"
         >
           <Mesh url={meshUrl} front={meshFront} isUnFixed={meshUnFixed} />
