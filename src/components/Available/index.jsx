@@ -19,7 +19,7 @@ function Available() {
         ></motion.div>
       </div>
       <a href={curriculum} target="_blank" rel="noopener noreferrer">
-        Available now for recruitment
+        Available for Recruitment - View My CV
       </a>
     </motion.div>
   );
