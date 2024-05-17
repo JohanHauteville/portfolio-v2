@@ -1,6 +1,6 @@
 import "./styles.scss";
 import { motion } from "framer-motion";
-import curriculum from "../../assets/files/curriculum-vitae.pdf";
+import curriculum from "../../assets/files/Curriculum-Vitae-Johan.pdf";
 
 function Available() {
   return (
