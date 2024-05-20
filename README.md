@@ -16,13 +16,13 @@ Ce projet est toujours en cours de réalisation.
 
 ### Objectifs du projet:
 
-- Présenter mon parcours.
-- Présenter mes projets.
-- Présenter mes skills.
-- Avoir un CV disponible sur l'application.
-- Mettre en place React Hook Form.
-- Réaliser une application où tous les éléments s'affiche sur une seule hauteur d'écran.
-- Réaliser une application ou le scrolling est intuitif.
+- Présenter mon parcours
+- Mettre en valeur mes projets
+- Afficher mes compétences
+- Fournir un CV accessible via l'application
+- Implémenter React Hook Form
+- Créer une application où tous les éléments sont visibles sur une seule hauteur d'écran
+- Assurer un défilement intuitif
 
 ### Outils:
 
@@ -33,6 +33,6 @@ Ce projet est toujours en cours de réalisation.
 
 ## Prochains points à améliorer
 
-- Responsive
-- Améliorer les modèles 3D
-- Rendre intéractifs les modèles 3D
+- Améliorer la réactivité
+- Optimiser les modèles 3D
+- Rendre les modèles 3D interactifs
