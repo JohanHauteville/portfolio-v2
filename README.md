@@ -1,5 +1,7 @@
 # Portfolio v2.0
 
+![wealth-health-logo.png](src%2Fassets%2Fimg%2FScreenShot.png)
+
 ## Description
 
 Bienvenue à la deuxième version de mon portfolio !
