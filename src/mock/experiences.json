@@ -80,6 +80,20 @@
     "certifications": [
         {
             "id": 0,
+        "name": "Certification Udemy",
+        "date": "2024",
+        "role": "Développeur NodeJS",
+        "typeOfContract": "Étudiant",
+        "location": "UDEMY",
+        "objectives":[
+            "Conception d'API REST",
+            "Création de serveur NodeJS",
+            "Utilisation de GraphQL",
+            "Apprentissage de Deno"
+        ]
+        },
+        {
+            "id": 0,
         "name": "R.N.C.P",
         "date": "2024",
         "role": "Développeur Concepteur Logiciel",
